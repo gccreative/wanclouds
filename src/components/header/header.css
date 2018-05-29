@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    position: relative;
+    left: 25%;
+    padding-top: 3.4vw;
+}
+
+.nav {
+    position: relative;
+    right: 25.5%;
+    padding-top: 2.5vw;
+}
+
+.logo-image {
+    width: 13.5vw;
+}
+
+.nav-logo {
+    margin: 0.6vw;
+    width: 2.7vw;
+}

@@ -1,0 +1,101 @@
+h6 {
+    color: #4172aa;
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: 3.5rem;
+    margin: 0;
+    margin-top: 4vw;
+}
+
+.description p {
+    margin-top: 3.1vw !important;
+    padding-left: 1vw !important;
+    padding-right: 1vw !important;
+    text-align: justify !important;
+    font-size: 1.2rem;
+}
+
+.section {
+    max-width: 64.9vw;
+    margin-left: 15vw;
+    margin-top: 8vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-heading {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5vw;
+}
+
+.name h3 {
+    margin-left: 10vw;
+}
+
+.name {
+    margin-left: 7.5vw;
+}
+
+.description {
+    display: flex;
+    width: 29vw;
+    margin-left: 2vw;
+    margin-top: 1vw;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5vw;
+}
+
+.arrow-left {
+    margin-top: 3.5vw;
+    margin-right: 2vw;
+    z-index: 2;
+}
+
+.partner {
+    background-color: white;
+    border-radius: 50%;
+    width: 30vw;
+    height: 29vw;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -2.5vw;
+}
+
+.arrow-right {
+    margin-top: 3.5vw;
+    margin-left: -1vw;
+    z-index: 2;
+}
+
+.arrow-image {
+    width: 4vw;
+}
+
+.partner-image {
+    width: 14vw;
+}
+
+.slider-indicator {
+    margin-bottom: 5vw;
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: flex-end; */
+    padding: 2vw 3vw;
+}
+
+.blue-circle {
+    background-color: #1374AB;
+    width: 1.6vw;
+    height: 1.6vw;
+    border-radius: 50%;
+    margin: 0.5vw;
+}
