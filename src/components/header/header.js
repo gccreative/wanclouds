@@ -18,7 +18,7 @@ const Header = ({ siteTitle }) => (
       <img className="nav-logo" src={home} alt="home"/>
       <img className="nav-logo" src={business} alt="business"/>
       <img className="nav-logo" src={custom} alt="custom"/>
-      <Link to="/news/">
+      <Link to="/blog/">
         <img className="nav-logo" src={news} alt="news"/>
       </Link>
       <img className="nav-logo" src={contact} alt="contact"/>
