@@ -3,6 +3,11 @@
     margin-left: 15vw;
 }
 
+.left-blog {
+    max-width: 816px;
+    margin-left: 15vw;
+}
+
 .left h4 {
     margin-left: 0;
     margin-right: 0;
@@ -18,15 +23,41 @@
     font-size: 1.4rem;
 }
 
+.left-blog h4 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.1vw;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 3rem;
+    font-family: "Jura";
+    color: #4172aa;
+    text-align: justify;
+    font-size: 1.4rem;
+}
+
+.left-blog p {
+    color: black;
+  }
+
 .section-contact {
     margin: 0;
     margin-top: 9.3vw;
     margin-bottom: 9.3vw;
     padding: 0;
     display: flex;
+    z-index: 4;
+    position: relative;
 }
 
 .section-contact .left {
+    max-width: 528px;
+    margin-left: 20vw;
+}
+
+.section-contact .left-blog {
     max-width: 528px;
     margin-left: 20vw;
 }

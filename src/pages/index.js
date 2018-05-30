@@ -14,7 +14,14 @@ import Brands from '../components/brands/brands'
 import ContactUs from '../components/contact-us/contact-us';
 import Footer from '../components/footer/footer';
 
+import bg from '../assets/NUEVO-BG.jpg'
+
 class RootIndex extends React.Component {
+
+  componentWillMount() {
+    document.body.style.background = "url(" + bg + ")"
+  }
+
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulPost.edges')
@@ -24,34 +31,34 @@ class RootIndex extends React.Component {
 
     return (
       <div>
-    <Helmet
-      title={siteTitle}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Header siteTitle={siteTitle} />
-    <div className="content-container">
-      <Main/>
-      <AboutUs/>
-      <Partners/>
-      <div className="placeholder"></div>
-      <Brands/>
-      <ContactUs/>
-      <Footer/>
-        {/* <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
-          {children()}
-        </div> */}
-    </div>
-  </div>
+        <Helmet
+          title={siteTitle}
+          meta={[
+            { name: 'description', content: 'Sample' },
+            { name: 'keywords', content: 'sample, something' },
+          ]}
+        />
+        <Header siteTitle={siteTitle} />
+        <div className="content-container">
+          <Main/>
+          <AboutUs/>
+          <Partners/>
+          <div className="placeholder"></div>
+          <Brands/>
+          <ContactUs/>
+          <Footer/>
+            {/* <div
+              style={{
+                margin: '0 auto',
+                maxWidth: 960,
+                padding: '0px 1.0875rem 1.45rem',
+                paddingTop: 0,
+              }}
+            >
+              {children()}
+            </div> */}
+        </div>
+      </div>
     )
   }
 }

@@ -2,30 +2,63 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import styles from './blog.module.css'
+import './blog.css'
+
 import ArticlePreview from '../components/article-preview'
+import HeaderBlog from '../components/header-blog/header-blog'
+import ContactUs from '../components/contact-us/contact-us'
+
+import title from '../assets/Blog/BLOG-TITLE.png'
+import bg from '../assets/Blog/BG-BLOG-WANCLOUDS.jpg'
 
 class BlogIndex extends React.Component {
+
+  getNode(array) {
+    let nodes = [];
+    array.forEach(post => {
+      nodes.push(post.node);
+    })
+    return nodes;
+  }
+
+  removeDuplicates( arr, prop ) {
+    let obj = {};
+    return Object.keys(arr.reduce((prev, next) => {
+      if(!obj[next[prop]]) obj[next[prop]] = next; 
+      return obj;
+    }, obj)).map((i) => obj[i]);
+  }
+
+  componentWillMount() {
+    document.body.style.background = "url(" + bg + ")"
+  }
+
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulPost.edges')
+    const postsRaw = get(this, 'props.data.allContentfulPost.edges')
+    const postsNodes = this.getNode(postsRaw);
+    const posts = this.removeDuplicates(postsNodes, 'slug');
+
+    console.log(posts);
 
     return (
-      <div style={{ background: '#fff' }}>
+      <div className="background">
         <Helmet title={siteTitle} />
+        <HeaderBlog />
+        <img id="title" src={title} alt="title"/>
+        <div className="title-space" />
         <div className="wrapper">
-          <div className={styles.hero}>Blog</div>
-          <h2 className="section-headline">Recent articles</h2>
           <ul className="article-list">
-            {posts.map(({ node }) => {
+            {posts.map((node, i) => {
               return (
                 <li key={node.slug}>
-                  <ArticlePreview article={node} />
+                  <ArticlePreview article={node} index={i}/>
                 </li>
               )
             })}
           </ul>
         </div>
+        <ContactUs state="blog"/>
       </div>
     )
   }

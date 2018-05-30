@@ -5,7 +5,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: url('../assets/HOMEPAGE-WANCLOUDS-BG.jpg');
+  /* background: url('../assets/HOMEPAGE-WANCLOUDS-BG.jpg'); */
   /* Background image is centered vertically and horizontally at all times */
   background-position: top center;
   
@@ -19,6 +19,7 @@ body, html {
   /* Set a background color that will be displayed
      while the background image is loading */
   background-color: #464646;
+  overflow: hidden;
 }
 
 html {
