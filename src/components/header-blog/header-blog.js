@@ -3,11 +3,11 @@ import Link from 'gatsby-link'
 import './header-blog.css'
 
 import logo from '../../assets/Blog/LOGO-BLOG-WANCLOUDS.png'
-import home from '../../assets/Blog/blog-icon-home-wanclouds.png'
-import news from '../../assets/Blog/blog-icon-news-wanclouds.png'
-import business from '../../assets/Blog/blog-icon-business-wanclouds.png'
-import contact from '../../assets/Blog/blog-icon-contact-wanclouds.png'
-import custom from '../../assets/Blog/blog-icon-customsolutions-wanclouds.png'
+import home from '../../assets/Blog/BLOG-PRINCIPAL_ICON-01-WANCLOUDS.png'
+import news from '../../assets/Blog/BLOG-PRINCIPAL_ICON-04-WANCLOUDS.png'
+import business from '../../assets/Blog/BLOG-PRINCIPAL_ICON-02-WANCLOUDS.png'
+import contact from '../../assets/Blog/BLOG-PRINCIPAL_ICON-05-WANCLOUDS.png'
+import custom from '../../assets/Blog/BLOG-PRINCIPAL_ICON-03-WANCLOUDS.png'
 
 const HeaderBlog = ({ siteTitle }) => (
   <div className="header">
@@ -15,7 +15,9 @@ const HeaderBlog = ({ siteTitle }) => (
       <img src={logo} alt="logo" className="logo-image"/>
     </div>
     <div className="nav">
-      <img className="nav-logo" src={home} alt="home"/>
+      <Link to="/">
+        <img className="nav-logo" src={home} alt="home"/>
+      </Link>
       <img className="nav-logo" src={business} alt="business"/>
       <img className="nav-logo" src={custom} alt="custom"/>
       <Link to="/blog/">

@@ -2,10 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 import './partners.css'
 
-import partner1 from '../../assets/HOMEPAGE-WANCLOUDS_PARTNERS-CABLE-WIRILESS.png'
-import partner2 from '../../assets/HOMEPAGE-WANCLOUDS_PARTNERS-SYSCO.png'
-import rightArrow from '../../assets/HOMEPAGE-WANCLOUDS_RIGHT-ICON-PARTNERS.png'
-import leftArrow from '../../assets/HOMEPAGE-WANCLOUDS_LEFT-ICON-PARTNERS.png'
+import partner1 from '../../assets/HOME_PARTNERS-AMAZON-WANCLOUDS.png'
+import partner2 from '../../assets/HOME_PARTNERS-MICROSOFT-WANCLOUDS.png'
+import rightArrow from '../../assets/HOME_STRATEGICPARTNERS-ICON-NEXT.png'
+import leftArrow from '../../assets/HOME_STRATEGICPARTNERS-ICON-PREVIOUS.png'
 
 const Partners = ({ siteTitle }) => (
   <div className="section">

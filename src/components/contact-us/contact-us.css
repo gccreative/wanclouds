@@ -64,6 +64,7 @@
 
 .info-line {
     display: flex;
+    margin-bottom: -16px;
 }
 
 .info-line img {
@@ -74,31 +75,35 @@
 .info {
     display: flex;
     flex-direction: column;
-    margin-left: 23%;
-    margin-top: 16%;
+    margin-top: 36px;
+    margin-left: 0;
 }
 
 .click {
-    height: 15vw;
-    width: 15vw;
-    background-color: #4172aa;
+    height: 30vw;
+    width: 30vw;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-left: 10.4%;
-    margin-top: 7%;
 }
 
-.click img {
-    height: 5vw;
-    margin-bottom: 1rem;
+.click form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 61%;
 }
 
-.click h4 {
-    margin-bottom: 0;
-    font-family: "Jura";
-    color: white;
-    font-size: 1.4rem;
+.click input, .click textarea {
+    border: none;
+    background-color: white;
+}
+
+.click label {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #0D1C39;
 }

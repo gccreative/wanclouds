@@ -32,6 +32,13 @@ body, html {
   position: relative;
 }
 
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .main-photo img {
   margin-bottom: 1.45rem;
   margin-top: 1.45rem;
@@ -41,6 +48,12 @@ body, html {
 .blog-content {
   width: 69%;
   position: relative;
+}
+
+.social-button {
+  position: relative;
+  z-index: 20;
+  margin-right: 10px;
 }
 
 .wrapper h4 {
@@ -58,6 +71,82 @@ body, html {
   color: black;
   font-weight: 600;
   line-height: 1.6rem;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+}
+
+.like {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 32%;
+  height: 100%;
+}
+
+.sharing {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 32%;
+  height: 100%;
+}
+
+.like-button {
+  margin-bottom: 0;
+  width: 50px;
+}
+
+.like p {
+  margin: 0;
+  margin-left: 10px;
+  color: #066EAD;
+}
+
+.comments {
+  width: 68%;
+  position: relative;
+  z-index: 5;
+  margin: 83px 0;
+}
+
+.comment-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Jura";
+  color: black;
+  text-align: justify;
+  margin: 4px;
+}
+
+input {
+  height: 45px;
+  background-color: transparent;
+  border-color: #066ead;
+  border-style: solid;
+  border-width: 1.5px;
+  padding: 8px;
+}
+
+textarea {
+  overflow: auto;
+  background-color: transparent;
+  border-color: #066ead;
+  border-style: solid;
+  border-width: 1.5px;
 }
 
 #title {

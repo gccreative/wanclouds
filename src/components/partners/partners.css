@@ -49,12 +49,14 @@ h6 {
     justify-content: center;
     align-items: center;
     margin-left: 5vw;
+    position: relative;
 }
 
 .arrow-left {
-    margin-top: 3.5vw;
-    margin-right: 2vw;
+    margin-top: 1.5vw;
     z-index: 2;
+    position: absolute;
+    left: -61px;
 }
 
 .partner {
@@ -71,18 +73,19 @@ h6 {
 }
 
 .arrow-right {
-    margin-top: 3.5vw;
-    margin-left: -1vw;
+    margin-top: 1.5vw;
     z-index: 2;
+    position: absolute;
+    right: -20px;
 }
 
-.arrow-image {
+/* .arrow-image {
     width: 4vw;
-}
+} */
 
-.partner-image {
+/* .partner-image {
     width: 14vw;
-}
+} */
 
 .slider-indicator {
     margin-bottom: 5vw;

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import './main.css'
 
-import cloud from '../../assets/HOMEPAGE-WANCLOUDS_CLOUD-TITLE-SLOGAN.png'
+import cloud from '../../assets/HOME_NUBE-SLOGAN-WANCLOUDS.png'
 
 const Main = ({ siteTitle }) => (
   <div className="main">

@@ -13,8 +13,10 @@ import Main from '../components/main/main'
 import Brands from '../components/brands/brands'
 import ContactUs from '../components/contact-us/contact-us';
 import Footer from '../components/footer/footer';
+import ProfessionalServices from '../components/profesional-services/profesional-services';
+import CustomSolutions from '../components/custom-solutions/custom-solutions';
 
-import bg from '../assets/NUEVO-BG.jpg'
+import bg from '../assets/HOME-BG.jpg'
 
 class RootIndex extends React.Component {
 
@@ -43,10 +45,10 @@ class RootIndex extends React.Component {
           <Main/>
           <AboutUs/>
           <Partners/>
-          <div className="placeholder"></div>
-          <Brands/>
+          <ProfessionalServices />
+          <CustomSolutions />
           <ContactUs/>
-          <Footer/>
+          <Footer color="light"/>
             {/* <div
               style={{
                 margin: '0 auto',

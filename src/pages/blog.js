@@ -7,9 +7,10 @@ import './blog.css'
 import ArticlePreview from '../components/article-preview'
 import HeaderBlog from '../components/header-blog/header-blog'
 import ContactUs from '../components/contact-us/contact-us'
+import Footer from '../components/footer/footer'
 
 import title from '../assets/Blog/BLOG-TITLE.png'
-import bg from '../assets/Blog/BG-BLOG-WANCLOUDS.jpg'
+import bg from '../assets/Blog/BLOG-PRINCIPAL-BG.png'
 
 class BlogIndex extends React.Component {
 
@@ -59,6 +60,7 @@ class BlogIndex extends React.Component {
           </ul>
         </div>
         <ContactUs state="blog"/>
+        <Footer color="dark"/>
       </div>
     )
   }

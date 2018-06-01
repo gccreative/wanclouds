@@ -3,11 +3,11 @@ import Link from 'gatsby-link'
 import './header.css'
 
 import logo from '../../assets/LOGO-LANDINGPAGE-WANCLOUDS.png'
-import home from '../../assets/HOMEPAGE-WANCLOUDS_ICONO-HOME.png'
-import news from '../../assets/HOMEPAGE-WANCLOUDS_ICONO-NEWS.png'
-import business from '../../assets/HOMEPAGE-WANCLOUDS_ICONO-BUSINESSCONSULTING.png'
-import contact from '../../assets/HOMEPAGE-WANCLOUDS_ICONO-CONTACT.png'
-import custom from '../../assets/HOMEPAGE-WANCLOUDS_CUSTOMSOLUTIONS.png'
+import home from '../../assets/HOME_MENU-ICON-01-WANCLOUDS.png'
+import news from '../../assets/HOME_MENU-ICON-04-WANCLOUDS.png'
+import business from '../../assets/HOME_MENU-ICON-02-WANCLOUDS.png'
+import contact from '../../assets/HOME_MENU-ICON-05-WANCLOUDS.png'
+import custom from '../../assets/HOME_MENU-ICON-03-WANCLOUDS.png'
 
 const Header = ({ siteTitle }) => (
   <div className="header">
