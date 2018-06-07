@@ -107,3 +107,40 @@
     text-align: center;
     color: #0D1C39;
 }
+
+@media (max-width: 414px) {
+    .section-contact {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .info {
+        width: 96%;
+    }
+
+    .info-line img {
+        height: 7vw;
+        margin-right: 5vw;
+    }
+
+    .click {
+        height: 350px;
+        width: 350px;
+    }
+
+    .click form {
+        width: 70%;
+    }
+
+    .section-contact .left-blog {
+        max-width: 100%;
+        margin-left: 0;
+    }
+    
+    .left-blog {
+        max-width: 100%;
+        margin-left: 0;
+        padding: 0 34px;
+    }
+}

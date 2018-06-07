@@ -10,6 +10,7 @@ import ContactUs from '../components/contact-us/contact-us'
 import Footer from '../components/footer/footer'
 
 import title from '../assets/Blog/BLOG-TITLE.png'
+import titleBlog from '../assets/Blog/BLOG-TITLE-MOBILE.png'
 import bg from '../assets/Blog/BLOG-PRINCIPAL-BG.png'
 
 class BlogIndex extends React.Component {
@@ -30,7 +31,7 @@ class BlogIndex extends React.Component {
     }, obj)).map((i) => obj[i]);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     document.body.style.background = "url(" + bg + ")"
   }
 
@@ -47,6 +48,7 @@ class BlogIndex extends React.Component {
         <Helmet title={siteTitle} />
         <HeaderBlog />
         <img id="title" src={title} alt="title"/>
+        <img id="title-mobile" src={titleBlog} alt="title"/>
         <div className="title-space" />
         <div className="wrapper">
           <ul className="article-list">

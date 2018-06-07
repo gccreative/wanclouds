@@ -155,3 +155,54 @@ textarea {
   width: 100%;
   z-index: 0;
 }
+
+@media (max-width: 414px) {
+  .blog-content {
+    width: 100%;
+    padding: 34px;
+  }
+
+  .section-headline {
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .author-section {
+    width: 100%;
+    margin-top: 0 !important;
+    flex-direction: column;
+  }
+
+  .photo {
+    margin: 0px !important;
+  }
+
+  .author-info {
+    width: 100% !important;
+    padding: 0 34px;
+  }
+
+  .author-info h1 {
+    margin: 20px 0 !important;
+    line-height: 1;
+  }
+
+  .comments {
+    width: 100%;
+    padding: 0 14px;
+  }
+
+  .comments h1 {
+    line-height: 1;
+  }
+
+  .section-contact .left-post {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 34px !important;
+  }
+
+  .contact-clickable img {
+    height: 10vw !important;
+  }
+}

@@ -23,3 +23,14 @@
     margin: 0.6vw;
     width: 2.7vw;
 }
+
+@media (max-width: 414px) {
+
+    .logo {
+        left: 14%;
+    }
+
+    .logo-image {
+        width: 31.5vw;
+    }
+}

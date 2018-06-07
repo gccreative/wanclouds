@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 93px 0;
+    position: relative;
 }
 
 #services {
@@ -11,16 +11,30 @@
     justify-content: center;
     align-items: center;
     width: 61%;
+    height: 100%;
 }
 
 .service-name {
-    position: absolute;
+    /* position: absolute;
     top: -122px;
+    right: 482px; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 61%;
+    padding: 42px 153px;
 }
 
 .service-name h3 {
     margin: 0;
-    margin-left: -135px;
+    margin-right: 66px;
+}
+
+.changing-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 616px;
 }
 
 .chart {
@@ -31,8 +45,9 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+    height: 100%;
     align-items: flex-start;
-    padding: 64px;
+    padding: 22px 64px;
     position: relative;
 }
 
@@ -44,7 +59,7 @@
 }
 
 .chart img {
-    width: 145%;
+    width: 136%;
     margin-left: -147px;
     max-width: none;
 }
@@ -69,9 +84,145 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 51px;
+}
+
+.arrows-services {
+    width: 61%;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 166px;
+}
+
+.arrows-services img {
+    width: 80px;
 }
 
 .arrows img {
     width: 80px;
+}
+
+.services-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 61%;
+    margin-top: 30px;
+}
+
+.services-two h5 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 15px;
+    color: inherit;
+    font-family: "Russo One";
+    color: white;
+    text-rendering: optimizeLegibility;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.1;
+    letter-spacing: 3px;
+}
+
+.services-two h4 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.1vw;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    font-family: "Jura";
+    color: #0573ad;
+    text-align: justify;
+    font-size: 2.1rem;
+    text-decoration: underline;
+}
+
+.expertise-yellow {
+    background-color: #e0c457;
+    margin: 5px;
+    height: 225px;
+    width: 237px;
+    padding: 23px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+.expertise-yellow li {
+    list-style: none;
+    margin: 0;
+    margin-bottom: 1px;
+    font-family: "Jura";
+    color: black;
+    font-size: 15px;
+    text-align: center;
+}
+
+.expertise-yellow ul {
+    list-style: none;
+    margin: 0;
+}
+
+.service-two-desc {
+    width: 72%;
+}
+
+.description-short-two {
+    padding-left: 43px;
+}
+
+@media (max-width: 414px) {
+    .services-container {
+        margin: 32px 0;
+    }
+    
+    #services {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .chart {
+        width: 100%;
+    }
+
+    .chart img {
+        width: 100%;
+        margin-left: 0;
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    .information {
+        padding: 0 64px;
+        width: 100%;
+    }
+
+    .service-name {
+        position: initial;
+        margin-bottom: 25px;
+    }
+
+    .service-name h3 {
+        margin-left: 0;
+        font-size: 2rem;
+    }
+
+    .service-name h2 {
+        font-size: 2.8rem;
+    }
 }

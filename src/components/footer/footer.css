@@ -12,3 +12,9 @@
 .footer p {
     margin: 0;
 }
+
+@media (max-width: 414px) {
+    .footer p {
+        font-size: 71%;
+    }
+}

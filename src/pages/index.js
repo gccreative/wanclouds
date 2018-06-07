@@ -15,12 +15,13 @@ import ContactUs from '../components/contact-us/contact-us';
 import Footer from '../components/footer/footer';
 import ProfessionalServices from '../components/profesional-services/profesional-services';
 import CustomSolutions from '../components/custom-solutions/custom-solutions';
+import News from '../components/news/news';
 
 import bg from '../assets/HOME-BG.jpg'
 
 class RootIndex extends React.Component {
 
-  componentWillMount() {
+  componentDidMount() {
     document.body.style.background = "url(" + bg + ")"
   }
 
@@ -47,18 +48,9 @@ class RootIndex extends React.Component {
           <Partners/>
           <ProfessionalServices />
           <CustomSolutions />
+          <News post={posts[0].node}/>
           <ContactUs/>
           <Footer color="light"/>
-            {/* <div
-              style={{
-                margin: '0 auto',
-                maxWidth: 960,
-                padding: '0px 1.0875rem 1.45rem',
-                paddingTop: 0,
-              }}
-            >
-              {children()}
-            </div> */}
         </div>
       </div>
     )

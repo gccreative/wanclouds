@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 93px 0;
+    margin: 171px 0;
     position: relative;
 }
 
@@ -112,7 +112,7 @@
     position: absolute;
 }
 
-.label h6 {
+.drawing h6 {
     color: #ecbb01;
     font-family: "Jura";
     font-weight: 600;
@@ -144,4 +144,34 @@
 .manufacture {
     bottom: 56%;
     left: 41%;
+}
+
+@media (max-width: 414px) {
+    .custom-container {
+        margin: 33px 0;
+    }
+    
+    .custom-name {
+        position: initial;
+    }
+
+    .custom-name h3 {
+        font-size: 2rem;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+    .custom-name h2 {
+        font-size: 2.8rem;
+    }
+
+    #custom-solutions {
+        width: 100%;
+        margin-top: 30px;
+        padding: 0 34px;
+    }
+
+    .drawing h6 {
+        font-size: 71%;
+    }
 }

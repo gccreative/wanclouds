@@ -24,14 +24,17 @@ import like from '../assets/Blog/BLOG-POST-INTERIOR_LIKE-ICON.png'
 
 class BlogPostTemplate extends React.Component {
 
-  componentWillMount() {
+  componentDidMount() {
     document.body.style.background = "url(" + bg + ")"
   }
 
   render() {
     const post = get(this.props, 'data.contentfulPost')
+    const posts = get(this, 'props.data.allContentfulPost.edges')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const url = 'https://www.wan-clouds.com/blog/' + post.slug
+
+    console.log(posts);
 
     return (
       <div className="container">

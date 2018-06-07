@@ -17,11 +17,15 @@ const ContactUs = ({ siteTitle, state }) => (
       <div className="info">
         <div className="info-line">
           <img src={state === "blog" ? phoneBlog : phone} alt="phone"/>
-          <h4>(305)351-3070</h4>
+          <a href="tel:305-351-3070">
+           <h4>(305)351-3070</h4>
+          </a>
         </div>
         <div className="info-line">
           <img src={state === "blog" ? emailBlog : email} alt="email"/>
-          <h4>admin@wan-clouds.com</h4>
+          <a href="mailto:admin@wan-clouds.com">
+            <h4>admin@wan-clouds.com</h4>
+          </a>
         </div>
       </div>
     </div>
