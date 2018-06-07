@@ -13,6 +13,7 @@
     position: relative;
     right: 25.5%;
     padding-top: 2.5vw;
+    z-index: 5;
 }
 
 .logo-image {

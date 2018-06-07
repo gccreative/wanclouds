@@ -71,10 +71,10 @@ class Partners extends React.Component {
             <div className="arrow-left" onClick={() => this.previousPartners()}>
                 <img src={leftArrow} className="arrow-image" alt="arrow"/>
             </div>
-              <div className="partner-one">
+              <div className={this.state.selectedPartnerOne % 2 ? "partner-one big" : "partner-one"}>
                 <img className="partner-image" src={this.state.parterns[this.state.selectedPartnerOne]} alt="partner"/>
               </div>
-              <div className="partner-two">
+              <div className={this.state.selectedPartnerTwo % 2 == 0 ? "partner-two" : "partner-two big"}>
                 <img className="partner-image" src={this.state.parterns[this.state.selectedPartnerTwo]} alt="partner"/>
               </div>
               <div className="arrow-right" onClick={() => this.nextPartners()}>

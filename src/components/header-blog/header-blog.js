@@ -1,5 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
 import './header-blog.css'
 
 import logo from '../../assets/Blog/LOGO-BLOG-WANCLOUDS.png'
@@ -17,13 +19,19 @@ const HeaderBlog = ({ siteTitle }) => (
     <div className="nav">
       <Link to="/">
         <img className="nav-logo" src={home} alt="home"/>
+      </Link> 
+      <Link to="/#business">
+        <img className="nav-logo" src={business} alt="business"/>
+      </Link> 
+      <Link to="/#custom">
+        <img className="nav-logo" src={custom} alt="custom"/>
       </Link>
-      <img className="nav-logo" src={business} alt="business"/>
-      <img className="nav-logo" src={custom} alt="custom"/>
       <Link to="/blog/">
         <img className="nav-logo" src={news} alt="news"/>
       </Link>
-      <img className="nav-logo" src={contact} alt="contact"/>
+      <AnchorLink href="#contact">
+        <img className="nav-logo" src={contact} alt="contact"/>
+      </AnchorLink> 
     </div>
   </div>
 )

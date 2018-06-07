@@ -10,7 +10,7 @@ import click from '../../assets/HOMEPAGE-WANCLOUDS-CONCTACTUS-CLICKICON.png'
 
 
 const ContactUs = ({ siteTitle, state }) => (
-  <div className="section-contact">
+  <div className="section-contact" id="contact">
     <div className={state === "blog" ? "left-blog" :"left"}>
       <h1>Contact Us</h1>
       <p>We engineer and execute cloud-based solutions for our clients. Contact our team to learn how we can start your business transformation today.</p>
