@@ -1,16 +1,14 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import ReactCursorPosition from 'react-cursor-position';
+
 import '../layouts/base.css'
-import Hero from '../components/hero'
-import ArticlePreview from '../components/article-preview'
 
 import Header from '../components/header/header'
 import AboutUs from '../components/about-us/about-us'
 import Partners from '../components/partners/partners'
 import Main from '../components/main/main'
-import Brands from '../components/brands/brands'
 import ContactUs from '../components/contact-us/contact-us';
 import Footer from '../components/footer/footer';
 import ProfessionalServices from '../components/profesional-services/profesional-services';
@@ -43,7 +41,9 @@ class RootIndex extends React.Component {
         />
         <Header siteTitle={siteTitle} />
         <div className="content-container">
-          <Main/>
+          <ReactCursorPosition>
+            <Main/>
+          </ReactCursorPosition>
           <AboutUs/>
           <Partners/>
           <ProfessionalServices />

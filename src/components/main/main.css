@@ -45,7 +45,7 @@ span h1 {
     left: 18%;
 }
 
-.white-circle1 {
+#white-circle1 {
     background-color: white;
     width: 20vw;
     height: 20vw;
@@ -56,7 +56,7 @@ span h1 {
     left: 32%;
 }
 
-.white-circle2 {
+#white-circle2 {
     background-color: white;
     width: 10vw;
     height: 10vw;
@@ -68,7 +68,7 @@ span h1 {
     z-index: 5;
 }
 
-.white-circle3 {
+#white-circle3 {
     background-color: white;
     width: 10vw;
     height: 10vw;
@@ -79,7 +79,7 @@ span h1 {
     left: 26%;
 }
 
-.white-circle4 {
+#white-circle4 {
     background-color: white;
     width: 15vw;
     height: 15vw;
@@ -90,7 +90,7 @@ span h1 {
     left: 20%;
 }
 
-.white-circle5 {
+#white-circle5 {
     background-color: white;
     width: 11vw;
     height: 11vw;
@@ -101,7 +101,7 @@ span h1 {
     left: 67%;
 }
 
-.white-circle6 {
+#white-circle6 {
     background-color: white;
     width: 11vw;
     height: 11vw;
@@ -112,7 +112,7 @@ span h1 {
     left: 71%;
 }
 
-.white-circle7 {
+#white-circle7 {
     background-color: white;
     width: 11vw;
     height: 11vw;
@@ -172,49 +172,49 @@ span h1 {
         top: 0%;
     }
 
-    .white-circle1 {
+    #white-circle1 {
         width: 30vw;
         height: 30vw;
         top: 16%;
         left: 19%;
     }
 
-    .white-circle2 {
+    #white-circle2 {
         width: 13vw;
         height: 13vw;
         top: 69%;
         left: 36%;
     }
 
-    .white-circle3 {
+    #white-circle3 {
         width: 15vw;
         height: 15vw;
         top: 6%;
         left: 12%;
     }
 
-    .white-circle4 {
+    #white-circle4 {
         width: 20vw;
         height: 20vw;
         top: 28%;
         left: 7%;
     }
 
-    .white-circle5 {
+    #white-circle5 {
         width: 16vw;
         height: 16vw;
         top: 4%;
         left: 72%;
     }
 
-    .white-circle6 {
+    #white-circle6 {
         width: 16vw;
         height: 16vw;
         top: 24%;
         left: 77%;
     }
 
-    .white-circle7 {
+    #white-circle7 {
         width: 16vw;
         height: 16vw;
         top: 58%;
