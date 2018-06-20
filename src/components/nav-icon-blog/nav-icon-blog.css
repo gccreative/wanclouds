@@ -1,0 +1,35 @@
+.nav-element{
+    margin: 0.6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.blog-p {
+    position: absolute;
+    text-align: center;
+    color: #066ead;
+    z-index: 10;
+}
+
+.nav-logo {
+    margin: 0;
+    width: 2.7vw;
+}
+
+.hover {
+    position: absolute;
+}
+
+@media (max-width: 414px) {
+
+    .logo {
+        left: 14%;
+    }
+
+    .logo-image {
+        width: 31.5vw;
+    }
+}

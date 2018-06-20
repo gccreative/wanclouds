@@ -7,10 +7,11 @@
     position: relative;
     left: 25%;
     padding-top: 3.4vw;
+    z-index: 5;
 }
 
 .nav {
-    position: relative;
+    position: fixed !important;
     right: 25.5%;
     padding-top: 2.5vw;
     z-index: 5;
@@ -23,4 +24,8 @@
 .nav-logo {
     margin: 0.6vw;
     width: 2.7vw;
+}
+
+#blog .bm-burger-bars {
+    background: #243057;
 }

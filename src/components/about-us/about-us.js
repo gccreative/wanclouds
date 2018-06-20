@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import './about-us.css'
 
 const AboutUs = ({ siteTitle }) => (
-  <div className="section-about">
+  <div className="section-about" id="about-us">
     <div id="bubble-one"></div>
     <div id="bubble-two"></div>
     <div className="left">

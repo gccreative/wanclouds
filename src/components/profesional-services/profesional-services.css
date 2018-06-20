@@ -34,7 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 616px;
+    height: 36.7vw;
 }
 
 .chart {
@@ -47,7 +47,7 @@
     width: 50%;
     height: 100%;
     align-items: flex-start;
-    padding: 22px 64px;
+    padding: 1vw 4vw;
     position: relative;
 }
 
@@ -60,7 +60,7 @@
 
 .chart img {
     width: 136%;
-    margin-left: -147px;
+    margin-left: -8.8vw;
     max-width: none;
 }
 
@@ -92,15 +92,15 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 166px;
+    padding-right: 10vw;
 }
 
 .arrows-services img {
-    width: 80px;
+    width: 4.8vw;
 }
 
 .arrows img {
-    width: 80px;
+    width: 4.8vw;
 }
 
 .services-two {
@@ -146,12 +146,23 @@
     text-decoration: underline;
 }
 
+.expertise-squares {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin: 20px 0;
+}
+
 .expertise-yellow {
     background-color: #e0c457;
     margin: 5px;
-    height: 225px;
-    width: 237px;
-    padding: 23px;
+    height: 13.3vw;
+    width: 14.1vw;
+    padding: 1.3vw;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -169,8 +180,9 @@
     margin-bottom: 1px;
     font-family: "Jura";
     color: black;
-    font-size: 15px;
+    font-size: 0.89vw;
     text-align: center;
+    line-height: 1.6vw;
 }
 
 .expertise-yellow ul {
@@ -194,6 +206,12 @@
     #services {
         flex-direction: column;
         width: 100%;
+        height: auto;
+    }
+
+    .changing-content {
+        height: auto;
+        width: 100%;
     }
 
     .chart {
@@ -213,8 +231,9 @@
     }
 
     .service-name {
-        position: initial;
-        margin-bottom: 25px;
+        width: 100%;
+        align-items: center;
+        padding: 0;
     }
 
     .service-name h3 {
@@ -225,4 +244,48 @@
     .service-name h2 {
         font-size: 2.8rem;
     }
+
+    .arrows-services {
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .services-two {
+        width: 100%;
+    }
+
+    .services-two h5 {
+        padding: 0 34px;
+    }
+
+    .service-two-desc {
+        width: 100%;
+        padding: 0 34px;
+    }
+
+    .description-short-two {
+        padding-left: 0;
+    }
+
+    .expertise-squares {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: scroll;
+        justify-content: flex-start;
+        padding: 0px 10px;
+    }
+
+    .expertise-yellow {
+        height: 225px;
+        width: 234px;
+        padding: 23px;
+    }
+
+    .expertise-yellow li {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
 }

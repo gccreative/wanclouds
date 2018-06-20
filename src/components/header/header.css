@@ -10,6 +10,7 @@
 }
 
 .nav {
+    display: flex;
     position: relative;
     right: 25.5%;
     padding-top: 2.5vw;
@@ -19,9 +20,27 @@
     width: 13.5vw;
 }
 
-.nav-logo {
+.nav-element{
     margin: 0.6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav-element p {
+    position: absolute;
+    z-index: 10;
+}
+
+.nav-logo {
+    margin: 0;
     width: 2.7vw;
+}
+
+.nav-mobile {
+    display: none;
 }
 
 @media (max-width: 414px) {
@@ -33,4 +52,78 @@
     .logo-image {
         width: 31.5vw;
     }
+
+    .nav-mobile {
+        display: initial;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav-mobile h4 {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding: 22px 0px;
+        margin-bottom: 0;
+        font-family: "Jura";
+        color: #4172aa;
+        text-align: center;
+        font-size: 1.2rem;
+        border-top: 0.5px solid grey;
+    }
+
+    /* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    right: 36px;
+    top: 36px;
+  }
+  
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: #d9dbdc;
+  }
+  
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+  
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: #bdc3c7;
+  }
+  
+  /* General sidebar styles */
+  .bm-menu {
+    background: #d9dbdc;
+    padding: 2.5em 0em;
+    font-size: 1.15em;
+  }
+  
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #373a47;
+  }
+  
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em 0;
+  }
+  
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+  }
+  
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
 }

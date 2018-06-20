@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+
 import Container from '../components/container'
 import Navigation from '../components/navigation'
 

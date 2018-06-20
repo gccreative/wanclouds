@@ -1,10 +1,35 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import posed, { PoseGroup } from 'react-pose'
+
 import './profesional-services.css'
+
+import Expertise from '../expertise/expertise'
 
 import chart from '../../assets/2-HOME_GRAFICA-PROFESSIONAL-SERVICES.png'
 import rightArrow from '../../assets/HOME_STRATEGICPARTNERS-ICON-NEXT.png'
 import leftArrow from '../../assets/HOME_STRATEGICPARTNERS-ICON-PREVIOUS.png'
+
+const CloudMigration = posed.div({
+  enter: { 
+    x: '0%',
+    opacity: 1 
+  },
+  exit: { 
+    x: '-100%',
+    opacity: 0
+  }
+})
+
+const RDBoost = posed.div({
+  enter: { 
+    x: '0%',
+    opacity: 1 
+  },
+  exit: { 
+    x: '100%',
+    opacity: 0
+  }
+})
 
 class ProfessionalServices extends React.Component {
 
@@ -53,24 +78,25 @@ class ProfessionalServices extends React.Component {
           <h2>Services</h2>
         </div>
         <div className="changing-content">
+        <PoseGroup animateOnMount={true}>
           {this.state.services[this.state.selectedService] === "Cloud Migration" ? 
-            <div id="services">
-              <div className="chart">
-                <img src={chart} alt="chart"/>
-              </div>
-              <div className="information">
-                <div className="service">
-                  <h4>Cloud Migration</h4>
-                  <p>At WanClouds Miami we understand both the technical and human resource requirements for a software defined business
-                    transformation, and can help your organization shift from physical to virtual and software-centric systems running 
-                    in the cloud. The WanClouds Miami team will define processes and controls, determine financial applications, and 
-                    complete all training for your staff among other tasks. Our capabilities span your entire IT lifecycle, and follow 
-                    an easy three step process: 1. Planning, 2. Building, 3. Optimizing.</p>
+              <CloudMigration id="services" key="services">
+                <div className="chart">
+                  <img src={chart} alt="chart"/>
                 </div>
-              </div>
-            </div>       
+                <div className="information">
+                  <div className="service">
+                    <h4>Cloud Migration</h4>
+                    <p>At WanClouds Miami we understand both the technical and human resource requirements for a software defined business
+                      transformation, and can help your organization shift from physical to virtual and software-centric systems running 
+                      in the cloud. The WanClouds Miami team will define processes and controls, determine financial applications, and 
+                      complete all training for your staff among other tasks. Our capabilities span your entire IT lifecycle, and follow 
+                      an easy three step process: 1. Planning, 2. Building, 3. Optimizing.</p>
+                  </div>
+                </div>
+              </CloudMigration>
           : 
-            <div className="services-two">
+          <RDBoost className="services-two" key="services-two">
               <div className="service-two-desc">
                 <h4>R&D Boost</h4>
                 <div className="description-short-two">
@@ -82,32 +108,33 @@ class ProfessionalServices extends React.Component {
                 </div>
               </div>
               <h5>Our areas of expertise include but are not limited to:</h5>
-              <div className="expertise-squres">
-                <div className="expertise-yellow">
+              <div className="expertise-squares">
+                <Expertise style="expertise-yellow">
                   <ul>
-                    <li>Development of software ZenPacks to unify, enhance and extend monitoring for edge routing, demarcation devices, wireless base stations among others. </li>
+                    <li>Development of software <br/> ZenPacks to unify, <br/> enhance and extend <br/> monitoring for edge <br/> routing, demarcation <br/> devices, wireless base <br/> stations among others. </li>
                   </ul>
-                </div>
-                <div className="expertise-yellow">
+                </Expertise>
+                <Expertise style="expertise-yellow">
                   <ul>
-                    <li>Building customized
-    solutions and developing superior products to replace critical out of date software as part of a primary business function.  </li>
+                    <li>Building customized <br/>
+    solutions and developing <br/> superior products to <br/> replace critical out of date <br/> software as part of a <br/> primary business function.</li>
                   </ul>
-                </div>
-                <div className="expertise-yellow">
+                </Expertise>
+                <Expertise style="expertise-yellow">
                   <ul>
-                    <li>Design and integration of SDK software players such as Android and IOS for use in superior video monitoring solutions.</li>
+                    <li>Design and integration of <br/> SDK software players such <br/> as Android and IOS for use <br/> in superior video <br/> monitoring solutions.</li>
                   </ul>
-                </div>
-                <div className="expertise-yellow">
+                </Expertise>
+                <Expertise style="expertise-yellow">
                   <ul>
-                    <li>Functionality enhancement software development for leading open architecture Unified Monitoring
+                    <li>Functionality <br/> enhancement software <br/> development for leading <br/> open architecture Unified <br/> Monitoring
                     Systems. </li>
                   </ul>
-                </div>
+                </Expertise>
               </div>
-            </div>        
+            </RDBoost>        
           }
+          </PoseGroup>       
         </div>
         <div className="arrows-services">
           <img src={leftArrow} alt="left" onClick={() => this.previousService()}/>

@@ -16,7 +16,6 @@ body, html {
   
   /* Set a background color that will be displayed
      while the background image is loading */
-  background-color: #464646;
 }
 
 .blog-content small {
@@ -154,6 +153,15 @@ textarea {
   top: 0vw;
   width: 100%;
   z-index: 0;
+}
+
+#wan-journal {
+  position: absolute;
+  width: 42vw;
+  height: 18vw;
+  top: 17.5vw;
+  right: 20vw;
+  z-index: 5;
 }
 
 @media (max-width: 414px) {

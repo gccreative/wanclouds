@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 171px 0;
+    margin: 102px 0;
     position: relative;
 }
 
@@ -13,13 +13,14 @@
     align-items: center;
     flex-direction: column;
     width: 61%;
-    margin-top: 30px;
+    margin-top: 18px;
 }
 
 .custom-name {
-    position: absolute;
-    top: -122px;
-    left: 474px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-left: 28vw;
 }
 
 .drawing {
@@ -50,7 +51,7 @@
     font-family: "Russo One";
     color: white;
     text-rendering: optimizeLegibility;
-    font-size: 1rem;
+    font-size: 1.1vw;
     font-weight: 100;
     line-height: 1.1;
     letter-spacing: 3px;
@@ -67,7 +68,7 @@
     font-family: "Jura";
     color: #0573ad;
     text-align: justify;
-    font-size: 2.1rem;
+    font-size: 2.2vw;
     text-decoration: underline;
 }
 
@@ -84,9 +85,9 @@
 
 .expertise {
     background-color: #0573ad;
-    margin: 5px;
-    height: 168px;
-    width: 300px;
+    margin: 0.3vw;
+    height: 10vw;
+    width: 18vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,10 +103,11 @@
 .expertise li {
     list-style: none;
     margin: 0;
-    margin-bottom: 1px;
+    margin-bottom: 0.1vw;
     font-family: "Jura";
     color: white;
     text-align: center;
+    font-size: 1.05vw;
 }
 
 .label {
@@ -173,5 +175,26 @@
 
     .drawing h6 {
         font-size: 71%;
+    }
+
+    .custom-name {
+        width: 100%;
+        align-items: center;
+        padding: 0;
+        margin-left: 0;
+    }
+
+    .expertise-squres {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: scroll;
+        justify-content: flex-start;
+        padding: 0px 10px;
+    }
+
+    .expertise {
+        height: 225px;
+        width: 234px;
+        padding: 23px;
     }
 }

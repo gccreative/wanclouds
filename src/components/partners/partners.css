@@ -12,7 +12,7 @@ h6 {
     padding-left: 1vw !important;
     padding-right: 1vw !important;
     text-align: justify !important;
-    font-size: 1.2rem;
+    font-size: 1.5vw;
 }
 
 .section {
@@ -50,13 +50,19 @@ h6 {
     align-items: center;
     margin-left: 5vw;
     position: relative;
+    min-height: 537px;
+    min-width: 1062px;
+}
+
+.slider-mobile {
+    display: none;
 }
 
 .arrow-left {
     margin-top: 1.5vw;
     z-index: 2;
     position: absolute;
-    left: -61px;
+    left: -3.5vw;
 }
 
 .partner-one {
@@ -74,7 +80,7 @@ h6 {
 
 .big {
     width: 33vw !important;
-    height: 32vw !important; 
+    height: 32vw !important;
 }
 
 .partner-two {
@@ -94,7 +100,7 @@ h6 {
     margin-top: 1.5vw;
     z-index: 2;
     position: absolute;
-    right: -20px;
+    right: -1vw;
 }
 
 /* .arrow-image {
@@ -168,7 +174,17 @@ h6 {
     }
 
     .slider {
+        display: none;
+    }
+
+    .slider-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-left: 0;
+        position: relative;
+        min-height: 310px;
+        min-width: auto;
     }
 
     .arrow-left {

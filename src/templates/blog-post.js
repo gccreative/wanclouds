@@ -41,6 +41,9 @@ class BlogPostTemplate extends React.Component {
         <Helmet title={`${post.title} | ${siteTitle}`} />
         <HeaderBlog />
         <div className="centered">
+          <Link to="/blog/">
+            <div id="wan-journal"/>
+          </Link>
           <img id="title" src={title} alt="title"/>
           <div className="title-space" />
           <div className="wrapper">

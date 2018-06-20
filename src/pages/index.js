@@ -1,7 +1,8 @@
 import React from 'react'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import ReactCursorPosition from 'react-cursor-position';
+import ReactCursorPosition from 'react-cursor-position'
+import { Parallax, ParallaxLayer } from 'react-spring'
 
 import '../layouts/base.css'
 
@@ -31,6 +32,7 @@ class RootIndex extends React.Component {
     console.log(posts);
 
     return (
+      <Parallax pages={7}>
       <div>
         <Helmet
           title={siteTitle}
@@ -41,18 +43,33 @@ class RootIndex extends React.Component {
         />
         <Header siteTitle={siteTitle} />
         <div className="content-container">
-          <ReactCursorPosition>
-            <Main/>
-          </ReactCursorPosition>
-          <AboutUs/>
-          <Partners/>
-          <ProfessionalServices />
-          <CustomSolutions />
-          <News post={posts[0].node}/>
-          <ContactUs/>
-          <Footer color="light"/>
+          <ParallaxLayer offset={0.05} speed={0.1} onScroll={e => e.stopPropagation()}>
+            <div className="parallax-container">
+              <div className="sphere" id="about"></div>
+              <div className="sphere" id="strategic"></div>
+              <div className="sphere" id="partners"></div>
+              <div className="sphere" id="profesional"></div>
+              <div className="sphere" id="custom-sol"></div>
+              <div className="sphere" id="right"></div>
+              <div className="sphere" id="news"></div>
+              <div className="sphere" id="last"></div>
+            </div>
+          </ParallaxLayer>
+          <ParallaxLayer offset={0} onScroll={e => e.stopPropagation()}>
+            <ReactCursorPosition>
+              <Main/>
+            </ReactCursorPosition>
+            <AboutUs/>
+            <Partners/>
+            <ProfessionalServices />
+            <CustomSolutions />
+            <News post={posts[0].node}/>
+            <ContactUs/>
+            <Footer color="light"/>
+          </ParallaxLayer>
         </div>
       </div>
+      </Parallax>
     )
   }
 }

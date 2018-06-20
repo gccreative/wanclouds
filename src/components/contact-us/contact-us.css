@@ -53,12 +53,12 @@
 }
 
 .section-contact .left {
-    max-width: 528px;
+    max-width: 32vw;
     margin-left: 20vw;
 }
 
 .section-contact .left-blog {
-    max-width: 528px;
+    max-width: 32vw;
     margin-left: 20vw;
 }
 
@@ -94,10 +94,12 @@
     flex-direction: column;
     align-items: center;
     width: 61%;
+    margin: 0;
 }
 
 .click input, .click textarea {
     border: none;
+    text-align: center;
     background-color: white;
 }
 
@@ -106,6 +108,45 @@
     flex-direction: column;
     text-align: center;
     color: #0D1C39;
+}
+
+.thank-you {
+    width: 68%;
+    height: 56%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thank-you h4 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.1vw;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    font-family: "Jura";
+    color: #4172aa;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.thank-you h2 {
+    font-size: 28px;
+    text-align: center;
+}
+
+button {
+    border: none;
+    background-color: #1374ab;
+    color: white;
+    font-family: "Jura" !important;
+    font-size: 1rem !important;
+    padding: 10px 30px;
+    margin-top: 17px !important;
 }
 
 @media (max-width: 414px) {
@@ -130,7 +171,11 @@
     }
 
     .click form {
-        width: 70%;
+        width: 81%;
+    }
+
+    .click input, .click textarea {
+        height: 28px;
     }
 
     .section-contact .left-blog {

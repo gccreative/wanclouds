@@ -11,8 +11,8 @@
   font-family: "Russo One";
   color: white;
   text-rendering: optimizeLegibility;
-  font-size: 4rem;
-  line-height: 0.7;
+  font-size: 5vw;
+  line-height: 3.5vw;
   letter-spacing: 3px;
 }
 
@@ -27,13 +27,13 @@ span {
 span h1 {
     /* margin-left: 5px; */
     margin: 0;
-    margin-top: 41px;
-    margin-left: 5px;
-    font-size: 6rem;
+    margin-top: 2.9vw;
+    margin-left: 0.4vw;
+    font-size: 7vw;
 }
 
 .main {
-    height: 35vw;
+    height: 36vw;
     max-width: 64.9vw;
     margin-left: 15vw;
 }
@@ -41,8 +41,8 @@ span h1 {
 .text {
     position: absolute;
     z-index: 6;
-    top: 54%;
-    left: 18%;
+    top: 21%;
+    left: 19%;
 }
 
 #white-circle1 {
@@ -52,8 +52,8 @@ span h1 {
     border-radius: 50%;
     opacity: 0.3;
     position: absolute;
-    top: 45%;
-    left: 32%;
+    top: 12%;
+    left: 33%;
 }
 
 #white-circle2 {
@@ -63,8 +63,8 @@ span h1 {
     border-radius: 50%;
     opacity: 0.3;
     position: absolute;
-    top: 66%;
-    left: 43%;
+    top: 33%;
+    left: 44%;
     z-index: 5;
 }
 
@@ -75,8 +75,8 @@ span h1 {
     border-radius: 50%;
     opacity: 0.3;
     position: absolute;
-    top: 42%;
-    left: 26%;
+    top: 9%;
+    left: 27%;
 }
 
 #white-circle4 {
@@ -86,8 +86,8 @@ span h1 {
     border-radius: 50%;
     opacity: 0.3;
     position: absolute;
-    top: 50%;
-    left: 20%;
+    top: 17%;
+    left: 21%;
 }
 
 #white-circle5 {
@@ -97,8 +97,8 @@ span h1 {
     border-radius: 50%;
     opacity: 0.3;
     position: absolute;
-    top: 39%;
-    left: 67%;
+    top: 6%;
+    left: 68%;
 }
 
 #white-circle6 {
@@ -108,8 +108,8 @@ span h1 {
     border-radius: 50%;
     opacity: 0.3;
     position: absolute;
-    top: 61%;
-    left: 71%;
+    top: 28%;
+    left: 72%;
 }
 
 #white-circle7 {
@@ -119,14 +119,14 @@ span h1 {
     border-radius: 50%;
     opacity: 0.3;
     position: absolute;
-    top: 47%;
-    left: 71%;
+    top: 14%;
+    left: 72%;
 }
 
 #cloud {
     position: absolute;
-    left: 41%;
-    top: 34%;
+    left: 42vw;
+    top: 0.5vw;
     width: 39vw;
     z-index: 4;
 }
