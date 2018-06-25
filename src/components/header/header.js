@@ -66,43 +66,47 @@ class Header extends React.Component {
           <img src={logo} alt="logo" className="logo-image"/>
           </Link>
         </div>
+        {console.log(this.props)}
         <div className="nav">
             <AnchorLink href='#home'>
               <NavIcon name="Home" image={home} hoverImage={homeHover}/>
-            </AnchorLink> 
-            <HashLink to='/#about-us'>
+            </AnchorLink>
+            <AnchorLink href='#about-us'>
               <NavIcon name="About" image={about} hoverImage={aboutHover}/>
-            </HashLink> 
-            <HashLink to='/#business'>
+            </AnchorLink> 
+            <AnchorLink href='#business'>
               <NavIcon name="Professional Services" image={business} hoverImage={businessHover}/>
-            </HashLink> 
-            <HashLink to='/#custom' scroll={el => el.scrollIntoView({ offset: '0.5' })}>
+            </AnchorLink> 
+            <AnchorLink href='#custom'>
               <NavIcon name="Custom Solutions" image={custom} hoverImage={customHover}/>
-            </HashLink>
+            </AnchorLink>
             <Link to="/blog/">
               <NavIcon name="News" image={news} hoverImage={newsHover}/>
             </Link>
-            <HashLink to='/#contact'>
+            <AnchorLink href='#contact'>
               <NavIcon name="Contact" image={contact} hoverImage={contactHover}/>
-            </HashLink>
+            </AnchorLink>
         </div>
         <div className="nav-mobile">
           <Menu right width={ '100%' } isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)}>
             <AnchorLink href='#home' onClick={() => this.closeMenu()}>
               <h4>HOME</h4>
             </AnchorLink> 
-            <HashLink to='/#business' onClick={() => this.closeMenu()}>
+            <AnchorLink href='#about-us' onClick={() => this.closeMenu()}>
+              <h4>ABOUT</h4>
+            </AnchorLink> 
+            <AnchorLink href='#business' onClick={() => this.closeMenu()}>
               <h4>BUSINESS</h4>
-            </HashLink> 
-            <HashLink to='/#custom' scroll={el => el.scrollIntoView({ offset: '0.5' })} onClick={() => this.closeMenu()}>
+            </AnchorLink> 
+            <AnchorLink href='#custom' onClick={() => this.closeMenu()}>
               <h4>CUSTOM SOLUTIONS</h4>
-            </HashLink>
+            </AnchorLink>
             <Link to="/blog/">
               <h4>NEWS</h4>
             </Link>
-            <HashLink to='/#contact' onClick={() => this.closeMenu()}>
+            <AnchorLink href='#contact' onClick={() => this.closeMenu()}>
               <h4>CONTACT</h4>
-            </HashLink>
+            </AnchorLink>
           </Menu> 
         </div>
       </div>

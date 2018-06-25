@@ -4,8 +4,6 @@ import './about-us.css'
 
 const AboutUs = ({ siteTitle }) => (
   <div className="section-about" id="about-us">
-    <div id="bubble-one"></div>
-    <div id="bubble-two"></div>
     <div className="left">
       <h1>About Us</h1>
       <p>Our team has over 100 years of combined experience in product and business development, working with 

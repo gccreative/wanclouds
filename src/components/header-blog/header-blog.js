@@ -77,6 +77,9 @@ class HeaderBlog extends React.Component {
                 <Link to='/' onClick={() => this.closeMenu()}>
                   <h4>HOME</h4>
                 </Link> 
+                <HashLink smooth to='/#about-us' onClick={() => this.closeMenu()}>
+                  <h4>ABOUT</h4>
+                </HashLink> 
                 <HashLink smooth to='/#business' onClick={() => this.closeMenu()}>
                   <h4>BUSINESS</h4>
                 </HashLink> 

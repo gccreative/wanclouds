@@ -99,10 +99,6 @@
     width: 4.8vw;
 }
 
-.arrows img {
-    width: 4.8vw;
-}
-
 .services-two {
     display: flex;
     justify-content: center;
@@ -200,7 +196,7 @@
 
 @media (max-width: 414px) {
     .services-container {
-        margin: 32px 0;
+        margin: 57px 0;
     }
     
     #services {
@@ -223,6 +219,10 @@
         margin-left: 0;
         max-width: 100%;
         margin-bottom: 0;
+    }
+
+    .arrows-services img {
+        width: 18.8vw !important;
     }
 
     .information {

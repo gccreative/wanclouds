@@ -173,6 +173,15 @@
         padding: 0 34px;
     }
 
+    #custom-solutions h4 {
+        font-size: 6.2vw;
+    }
+
+    #custom-solutions h5 {
+        font-size: 4.1vw;
+        text-align: center;
+    }
+
     .drawing h6 {
         font-size: 71%;
     }
@@ -196,5 +205,15 @@
         height: 225px;
         width: 234px;
         padding: 23px;
+    }
+
+    .expertise li {
+        list-style: none;
+        margin: 0;
+        margin-bottom: 3.1vw;
+        font-family: "Jura";
+        color: white;
+        text-align: center;
+        font-size: 4.05vw;
     }
 }

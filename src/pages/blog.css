@@ -108,7 +108,7 @@ ul {
 #profesional {
   width: 13vw;
   height: 13vw;
-  top: 133vw;
+  top: 136vw;
   left: 48%;
 }
 
@@ -136,7 +136,7 @@ ul {
 #last {
   width: 14vw;
   height: 14vw;
-  top: 358vw;
+  top: 345vw;
   left: 15%;
 }
 
@@ -164,7 +164,7 @@ ul {
   .round-image {
     height: auto !important;
     width: 100% !important;
-    margin-top: -31px;
+    margin-top: 0;
   }
   
   small {
@@ -196,6 +196,8 @@ ul {
   .read-more-left {
     margin: 30px 0 -36px 0 !important;
     z-index: 3 !important;
+    width: 20vw !important;
+    height: 20vw !important;
   }
 
   .read-more-left p {
@@ -228,9 +230,16 @@ ul {
   .read-more-right {
     margin: 30px 0 -36px 0 !important;
     z-index: 3 !important;
+    width: 20vw !important;
+    height: 20vw !important;
   }
 
   .read-more-right p {
     font-size: 122% !important;
+  }
+
+  .image-cropper {
+    width: 62vw !important;
+    height: 62vw !important;
   }
 }

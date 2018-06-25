@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 178px 0;
+    margin: 246px 0;
     position: relative;
 }
 
@@ -61,6 +61,7 @@
 
 .description-news-short {
     width: 73%;
+    margin-bottom: 3vw;
 }
 
 .article {
@@ -84,6 +85,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -8vw;
 }
 
 .body-preview {
@@ -97,8 +99,8 @@
 }
 
 .preview-image .image-cropper {
-    width: 450px;
-    height: 450px;
+    width: 24vw;
+    height: 24vw;
 }
 
 .read-more {
@@ -166,6 +168,7 @@
     .news-name h3 {
         margin-left: 0;
         margin: 0;
+        font-size: 2.5rem;
     }
 
     #news-solutions {
@@ -191,16 +194,32 @@
         width: 100%;
     }
 
+    .preview h4 {
+        font-size: 4vw;
+    }
+
+    .preview a {
+        font-size: 5vw;
+    }
+
     .body-preview {
         margin-bottom: 13px;
         height: 421px;
     }
 
+    .body-preview p {
+        line-height: 6.25vw;
+    }
+
     .read-more {
-        width: 109px;
-        height: 209px;
+        width: 93px;
+        height: 169px;
         margin: 0px;
         z-index: 3;
+    }
+
+    .read-more p {
+        margin: 0;
     }
 
     .preview-image {

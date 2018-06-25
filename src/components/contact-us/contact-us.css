@@ -93,7 +93,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 61%;
+    width: 71%;
     margin: 0;
 }
 
@@ -108,6 +108,8 @@
     flex-direction: column;
     text-align: center;
     color: #0D1C39;
+    font-size: 1vw;
+    margin: 1vw;
 }
 
 .thank-you {
@@ -144,8 +146,8 @@ button {
     background-color: #1374ab;
     color: white;
     font-family: "Jura" !important;
-    font-size: 1rem !important;
-    padding: 10px 30px;
+    font-size: 1vw !important;
+    padding: 1vw 2vw;
     margin-top: 17px !important;
 }
 
@@ -154,6 +156,11 @@ button {
         flex-direction: column;
         align-items: center;
         margin-top: 0;
+    }
+
+    .section-contact h1 {
+        font-size: 2.5rem;
+        margin-bottom: 12.5vw;
     }
 
     .info {
@@ -172,6 +179,15 @@ button {
 
     .click form {
         width: 81%;
+    }
+
+    .click label {
+        font-size: 4vw;
+    }
+
+    button {
+        font-size: 4vw !important;
+        padding: 2vw 4vw !important;
     }
 
     .click input, .click textarea {

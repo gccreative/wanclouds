@@ -20,8 +20,33 @@ import bg from '../assets/HOME-BG.jpg'
 
 class RootIndex extends React.Component {
 
+  constructor (props) {
+    super(props)
+    this.state = {
+      transform: 0
+    }
+    this.myRef = React.createRef();
+  }
+
   componentDidMount() {
-    document.body.style.background = "url(" + bg + ")"
+    document.body.style.background = "url(" + bg + ")";
+    window.addEventListener('scroll', this.handleScroll, true);
+    console.log(this.myRef.current)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll, true);
+  }
+
+  handleScroll = () => {
+    let windowScroll = window.scrollY;
+    let scrollTop = event.srcElement.body.scrollTop,
+    itemTranslate = -1 * windowScroll/10;
+    console.log(itemTranslate);
+
+    this.setState({
+      transform: itemTranslate
+    });
   }
 
   render() {
@@ -32,44 +57,44 @@ class RootIndex extends React.Component {
     console.log(posts);
 
     return (
-      <Parallax pages={7}>
-      <div>
-        <Helmet
-          title={siteTitle}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        />
-        <Header siteTitle={siteTitle} />
-        <div className="content-container">
-          <ParallaxLayer offset={0.05} speed={0.1} onScroll={e => e.stopPropagation()}>
-            <div className="parallax-container">
-              <div className="sphere" id="about"></div>
-              <div className="sphere" id="strategic"></div>
-              <div className="sphere" id="partners"></div>
-              <div className="sphere" id="profesional"></div>
-              <div className="sphere" id="custom-sol"></div>
-              <div className="sphere" id="right"></div>
-              <div className="sphere" id="news"></div>
-              <div className="sphere" id="last"></div>
-            </div>
-          </ParallaxLayer>
-          <ParallaxLayer offset={0} onScroll={e => e.stopPropagation()}>
-            <ReactCursorPosition>
-              <Main/>
-            </ReactCursorPosition>
-            <AboutUs/>
-            <Partners/>
-            <ProfessionalServices />
-            <CustomSolutions />
-            <News post={posts[0].node}/>
-            <ContactUs/>
-            <Footer color="light"/>
-          </ParallaxLayer>
+      // <Parallax pages={7} ref={ref => this.parallax = ref}>
+        <div>
+          <Helmet
+            title={siteTitle}
+            meta={[
+              { name: 'description', content: 'Sample' },
+              { name: 'keywords', content: 'sample, something' },
+            ]}
+          />
+          <Header siteTitle={siteTitle}/>
+          <div className="content-container">
+            {/* <ParallaxLayer offset={0.05} speed={0.1} onScroll={e => e.stopPropagation()}> */}
+              <div className="parallax-container" style={{transform: 'translateY(' + this.state.transform + 'px)'}} ref={this.myRef}>
+                <div className="sphere" id="about"></div>
+                <div className="sphere" id="strategic"></div>
+                <div className="sphere" id="partners"></div>
+                <div className="sphere" id="profesional"></div>
+                <div className="sphere" id="custom-sol"></div>
+                <div className="sphere" id="right"></div>
+                <div className="sphere" id="news"></div>
+                <div className="sphere" id="last"></div>
+              </div>
+            {/* </ParallaxLayer> */}
+            {/* <ParallaxLayer offset={0} onScroll={e => e.stopPropagation()}> */}
+              <ReactCursorPosition>
+                <Main/>
+              </ReactCursorPosition>
+              <AboutUs/>
+              <Partners/>
+              <ProfessionalServices />
+              <CustomSolutions />
+              <News post={posts[0].node}/>
+              <ContactUs/>
+              <Footer color="light"/>
+            {/* </ParallaxLayer> */}
+          </div>
         </div>
-      </div>
-      </Parallax>
+      // </Parallax>
     )
   }
 }

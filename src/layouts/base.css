@@ -22,9 +22,9 @@ body, html {
   overflow: hidden;
 }
 
-::-webkit-scrollbar { 
+/* ::-webkit-scrollbar { 
   display: none; 
-}
+} */
 
 html {
   font-family: sans-serif;
@@ -634,6 +634,12 @@ pre tt:after {
 }
 
 .content-container {
+  /* height: 371vw; */
+}
+
+.parallax-container {
+  position: absolute;
+  margin-top: 5vw;
 }
 
 .placeholder {
