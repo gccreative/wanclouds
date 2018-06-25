@@ -4,7 +4,6 @@ import Link from 'gatsby-link'
 
 export default ({ article, index }) => {
 
-  console.log(index);
   function isEven(n) {
     return n % 2 == 0;
  }

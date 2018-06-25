@@ -66,7 +66,6 @@ class Header extends React.Component {
           <img src={logo} alt="logo" className="logo-image"/>
           </Link>
         </div>
-        {console.log(this.props)}
         <div className="nav">
             <AnchorLink href='#home'>
               <NavIcon name="Home" image={home} hoverImage={homeHover}/>

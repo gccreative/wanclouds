@@ -31,7 +31,6 @@ class RootIndex extends React.Component {
   componentDidMount() {
     document.body.style.background = "url(" + bg + ")";
     window.addEventListener('scroll', this.handleScroll, true);
-    console.log(this.myRef.current)
   }
 
   componentWillUnmount() {
@@ -40,9 +39,7 @@ class RootIndex extends React.Component {
 
   handleScroll = () => {
     let windowScroll = window.scrollY;
-    let scrollTop = event.srcElement.body.scrollTop,
-    itemTranslate = -1 * windowScroll/10;
-    console.log(itemTranslate);
+    let itemTranslate = -1 * windowScroll/10;
 
     this.setState({
       transform: itemTranslate
@@ -53,8 +50,6 @@ class RootIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulPost.edges')
     // const [author] = get(this, 'props.data.allContentfulPerson.edges')
-
-    console.log(posts);
 
     return (
       // <Parallax pages={7} ref={ref => this.parallax = ref}>
@@ -130,7 +125,7 @@ export const pageQuery = graphql`
           }
           body {
             childMarkdownRemark {
-              html
+              rawMarkdownBody
             }
           }
         }

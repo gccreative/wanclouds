@@ -26,11 +26,9 @@ const News = ({ siteTitle, post }) => (
           <h4>{post.subtitle}</h4>
           <small> By: {post.author.name}</small>
           <div className="body-preview">
-            <p
-              dangerouslySetInnerHTML={{
-                __html: post.body.childMarkdownRemark.html,
-              }}
-            />
+            <p>
+              {post.body.childMarkdownRemark.rawMarkdownBody}
+            </p>
           </div>
           <div className="read-more">
             <p>

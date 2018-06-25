@@ -70,7 +70,6 @@ class ProfessionalServices extends React.Component {
   }
 
   render() {
-    console.log(this.state.services);
     return(
       <div className="services-container" id="business">
         <div className="service-name">
