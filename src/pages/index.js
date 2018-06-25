@@ -136,7 +136,13 @@ export const pageQuery = graphql`
         }
       }
     } 
-  }`
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+  `
 //     allContentfulPerson(filter: { id: { eq: "c15jwOBqpxqSAOy2eOO4S0m" } }) {
 //       edges {
 //         node {

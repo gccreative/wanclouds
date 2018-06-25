@@ -18,6 +18,11 @@ try {
 }
 
 module.exports = {
+  siteMetadata: {
+    title: `WanClouds`,
+    siteUrl: `https://www.wan-clouds.com`,
+    description: `Business Evolution Through The Cloud`,
+  },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
     'gatsby-transformer-remark',

@@ -11,7 +11,7 @@ const NavTitle = posed.p({
   },
   hovered: {
     opacity: 1,
-    top: "50px",
+    top: "60px",
     flip: true
   }
 })
