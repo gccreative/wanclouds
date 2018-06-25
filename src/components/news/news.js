@@ -12,11 +12,9 @@ const News = ({ siteTitle, post }) => (
     <div id="news-solutions">
       <h4 id="author-name">Author: {post.author.name}</h4>
       <div className="description-news-short">
-        <p
-          dangerouslySetInnerHTML={{
-            __html: post.author.shortBiography.childMarkdownRemark.html,
-          }}
-        />
+        <p>
+          {post.author.shortBiography.childMarkdownRemark.rawMarkdownBody}
+        </p>
       </div>
       <div className="article">
         <div className="preview">

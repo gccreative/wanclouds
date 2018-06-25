@@ -106,7 +106,7 @@ export const pageQuery = graphql`
             name
             shortBiography {
               childMarkdownRemark {
-                html
+                rawMarkdownBody
               }
             }
             photo {
