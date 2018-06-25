@@ -45,7 +45,7 @@ class BlogIndex extends React.Component {
 
     return (
       <div className="background">
-        <Helmet title={siteTitle} />
+        <Helmet title={`News | ${siteTitle}`} />
         <HeaderBlog />
         <img id="title" src={title} alt="title"/>
         <img id="title-mobile" src={titleBlog} alt="title"/>
@@ -103,6 +103,11 @@ query BlogIndexQuery {
             }
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }`

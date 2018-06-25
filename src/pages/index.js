@@ -55,13 +55,13 @@ class RootIndex extends React.Component {
       // <Parallax pages={7} ref={ref => this.parallax = ref}>
         <div>
           <Helmet
-            title={siteTitle}
+            title={`${siteTitle} | Business evolution through the cloud`}
             meta={[
               { name: 'description', content: 'Sample' },
               { name: 'keywords', content: 'sample, something' },
             ]}
           />
-          <Header siteTitle={siteTitle}/>
+          <Header siteTitle={`${siteTitle} | Business evolution through the cloud`}/>
           <div className="content-container">
             {/* <ParallaxLayer offset={0.05} speed={0.1} onScroll={e => e.stopPropagation()}> */}
               <div className="parallax-container" style={{transform: 'translateY(' + this.state.transform + 'px)'}} ref={this.myRef}>
