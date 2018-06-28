@@ -81,7 +81,7 @@ class HeaderBlog extends React.Component {
                   <h4>ABOUT</h4>
                 </HashLink> 
                 <HashLink smooth to='/#business' onClick={() => this.closeMenu()}>
-                  <h4>BUSINESS</h4>
+                  <h4>PROFESSIONAL SERVICES</h4>
                 </HashLink> 
                 <HashLink smooth to='/#custom' onClick={() => this.closeMenu()}>
                   <h4>CUSTOM SOLUTIONS</h4>

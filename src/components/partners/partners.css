@@ -132,7 +132,24 @@ h6 {
     margin: 0.5vw;
 }
 
+/*  IPAD STYLES  */
+@media (max-width: 768px) {
+    .arrow-left {
+        margin-top: 3.5vw;
+        left: -5.5vw;
+    }
 
+    .arrow-right {
+        margin-top: 3.5vw;
+        right: -3vw;
+    }
+
+    .arrow-image {
+        width: 8vw;
+    }
+}
+
+/*  MOBILE STYLES  */
 @media (max-width: 414px) {
     .section {
         max-width: 100%;

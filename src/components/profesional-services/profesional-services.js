@@ -76,6 +76,10 @@ class ProfessionalServices extends React.Component {
           <h3>Professional</h3>
           <h2>Services</h2>
         </div>
+        <div className="arrows-services-mobile">
+          <img src={leftArrow} alt="left" onClick={() => this.previousService()}/>
+          <img src={rightArrow} alt="right" onClick={() => this.nextService()}/>
+        </div>
         <div className="changing-content">
         <PoseGroup animateOnMount={true}>
           {this.state.services[this.state.selectedService] === "Cloud Migration" ? 

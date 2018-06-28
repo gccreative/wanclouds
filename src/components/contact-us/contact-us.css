@@ -151,6 +151,38 @@ button {
     margin-top: 17px !important;
 }
 
+/*  IPAD STYLES  */
+@media (max-width: 768px) {
+    .section-contact .left {
+        max-width: 40vw;
+        margin-left: 15vw;
+    }
+
+    .left h4 {
+        font-size: 2.5vw;
+    }
+
+    .click {
+        height: 33vw;
+        width: 33vw;
+    }
+
+    .click form {
+        width: 54%;
+        height: 85%;
+    }
+
+    .click label {
+        margin: 0;
+    }
+
+    button {
+        margin-top: 1vw !important;
+        padding: 0vw 2vw;
+    }
+}
+
+/*  MOBILE STYLES  */
 @media (max-width: 414px) {
     .section-contact {
         flex-direction: column;

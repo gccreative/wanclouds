@@ -95,6 +95,10 @@
     padding-right: 10vw;
 }
 
+.arrows-services-mobile {
+    display: none;
+}
+
 .arrows-services img {
     width: 4.8vw;
 }
@@ -194,13 +198,71 @@
     padding-left: 43px;
 }
 
+/*  IPAD STYLES  */
+@media (max-width: 768px) {
+    #services {
+        width: 78%;
+    }
+
+    .chart img {
+        width: 123%;
+        margin-left: -4.8vw;
+    }
+
+    .service p {
+        font-size: 1.75vw;
+        line-height: 2.3vw;
+        text-align: left;
+    }
+
+    .changing-content {
+        height: 57.7vw;
+    }
+
+    .arrows-services img {
+        width: 6.8vw;
+    }
+
+    .arrows-services {
+        padding-right: 5vw;
+    }
+
+    .services-two {
+        width: 82%;
+        margin-top: -13px;
+    }
+
+    .description-short-two {
+        padding-left: 0;
+    }
+
+    .description-short-two p {
+        font-size: 1.65vw;
+        line-height: 2vw;
+    }
+
+    .services-two h5 {
+        text-align: center;
+    }
+
+    .expertise-yellow {
+        height: 18.3vw;
+        width: 19.1vw;
+    }
+
+    .expertise-yellow li {
+        font-size: 1.5vw;
+    }
+}
+
+/*  MOBILE STYLES  */
 @media (max-width: 414px) {
     .services-container {
         margin: 57px 0;
     }
     
     #services {
-        flex-direction: column;
+        flex-direction: column-reverse;
         width: 100%;
         height: auto;
     }
@@ -212,16 +274,19 @@
 
     .chart {
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .chart img {
-        width: 100%;
+        width: 80%;
         margin-left: 0;
         max-width: 100%;
         margin-bottom: 0;
     }
 
-    .arrows-services img {
+    .arrows-services-mobile img {
         width: 18.8vw !important;
     }
 
@@ -246,6 +311,12 @@
     }
 
     .arrows-services {
+        display: none;
+    }
+
+    .arrows-services-mobile {
+        display: flex;
+        align-items: center;
         width: 100%;
         padding: 0;
         justify-content: center;

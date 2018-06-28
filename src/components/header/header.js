@@ -95,7 +95,7 @@ class Header extends React.Component {
               <h4>ABOUT</h4>
             </AnchorLink> 
             <AnchorLink href='#business' onClick={() => this.closeMenu()}>
-              <h4>BUSINESS</h4>
+              <h4>PROFESSIONAL SERVICES</h4>
             </AnchorLink> 
             <AnchorLink href='#custom' onClick={() => this.closeMenu()}>
               <h4>CUSTOM SOLUTIONS</h4>

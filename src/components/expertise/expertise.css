@@ -22,6 +22,10 @@
     position: absolute;
 }
 
+#box-mobile {
+    display: none;
+}
+
 @media (max-width: 414px) {
 
     .logo {
@@ -30,5 +34,14 @@
 
     .logo-image {
         width: 31.5vw;
+    }
+
+    #box-desktop {
+        display: none;
+    }
+
+    #box-mobile {
+        display: inherit;
+        cursor:'pointer';
     }
 }

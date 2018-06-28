@@ -30,6 +30,13 @@ class Expertise extends React.Component {
       return (
         <div>
           <Box pose={this.state.hovered ? "hovered" : "idle"} 
+            id="box-desktop"
+            className={this.props.style} onMouseEnter={() => this.hoverIn()}
+            onMouseLeave={() => this.hoverOut()}>
+            {this.props.children}
+          </Box>
+          <Box pose={this.state.hovered ? "hovered" : "idle"} 
+            id="box-mobile"
             className={this.props.style} onMouseEnter={() => this.hoverIn()}
             onMouseLeave={() => this.hoverOut()}>
             {this.props.children}

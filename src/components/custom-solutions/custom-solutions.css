@@ -148,6 +148,54 @@
     left: 41%;
 }
 
+/*  IPAD STYLES  */
+@media (max-width: 768px) {
+    .custom-container {
+        margin: 54px 0;
+    }
+
+    .custom-name h3 {
+        margin: 0;
+        margin-left: -43px;
+    }
+
+    .description-short p {
+        font-size: 1.75vw;
+        line-height: 2.3vw;
+    }
+
+    #custom-solutions {
+        width: 78%;
+    }
+
+    #custom-solutions h4 {
+        font-size: 3vw;
+    }
+
+    #custom-solutions h5 {
+        font-size: 2.1vw;
+        text-align: center;
+    }
+
+    .drawing {
+        margin: 48px 0;
+    }
+
+    .drawing h6 {
+        font-size: 89%;
+    }
+
+    .expertise {
+        height: 16vw;
+        width: 25vw;
+    }
+
+    .expertise li {
+        font-size: 1.65vw;
+    }
+}
+
+/*  MOBILE STYLES  */
 @media (max-width: 414px) {
     .custom-container {
         margin: 33px 0;

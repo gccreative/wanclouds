@@ -131,6 +131,23 @@ span h1 {
     z-index: 4;
 }
 
+/*  IPAD STYLES  */
+@media (max-width: 768px) {
+    .main {
+        height: 26vw;
+    }
+
+    .left {
+        max-width: 63vw;
+    }
+
+    .left p {
+        font-size: 1.70vw;
+        line-height: 2.7vw;
+    }
+}
+
+/*  MOBILE STYLES  */
 @media (max-width: 414px) {
     .main {
         max-width: 100%;

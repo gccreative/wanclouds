@@ -43,6 +43,26 @@
     display: none;
 }
 
+/*  IPAD STYLES  */
+@media (max-width: 768px) {
+    .logo{
+        left: 20%;
+    }
+
+    .nav {
+        right: 20.5%;
+    }
+
+    .logo-image {
+        width: 17.5vw;
+    }
+
+    .nav-logo {
+        width: 3.7vw !important;
+    }
+}
+
+/*  MOBILE STYLES  */
 @media (max-width: 414px) {
 
     .logo {
