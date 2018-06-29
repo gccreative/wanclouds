@@ -73,24 +73,24 @@ class HeaderBlog extends React.Component {
           </AnchorLink> 
         </div>
         <div className="nav-tablet">
-            <AnchorLink href='#home'>
-              <NavIcon name="Home" image={home} hoverImage={homeHover}/>
-            </AnchorLink>
-            <AnchorLink href='#about-us'>
+          <Link to='/'>
+            <NavIcon name="Home" image={home} hoverImage={homeHover}/>
+          </Link>
+          <HashLink to='/#about-us'>
               <NavIcon name="About" image={about} hoverImage={aboutHover}/>
-            </AnchorLink> 
-            <AnchorLink href='#business'>
-              <NavIcon name="Professional Services" image={business} hoverImage={businessHover}/>
-            </AnchorLink>
-            <AnchorLink href='#custom'>
-              <NavIcon name="Custom Solutions" image={custom} hoverImage={customHover}/>
-            </AnchorLink>
-            <Link to="/blog/">
-              <NavIcon name="News" image={news} hoverImage={newsHover}/>
-            </Link>
-            <AnchorLink href='#contact'>
-              <NavIcon name="Contact" image={contact} hoverImage={contactHover}/>
-            </AnchorLink>
+          </HashLink>  
+          <HashLink smooth to='/#business'>
+            <NavIcon name="Professional Services" image={business} hoverImage={businessHover}/>
+          </HashLink> 
+          <HashLink smooth to='/#custom'>
+            <NavIcon name="Custom Solutions" image={custom} hoverImage={customHover}/>
+          </HashLink>
+          <Link to="/blog/">
+            <NavIcon name="News" image={news} hoverImage={newsHover}/>
+          </Link>
+          <AnchorLink href='#contact'>
+            <NavIcon name="Contact" image={contact} hoverImage={contactHover}/>
+          </AnchorLink> 
         </div>
         <div className="nav-mobile" id="blog">
               <Menu right width={ '100%' } isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)}>
