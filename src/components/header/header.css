@@ -16,6 +16,13 @@
     padding-top: 2.5vw;
 }
 
+.nav-tablet {
+    display: none;
+    position: relative;
+    right: 25.5%;
+    padding-top: 2.5vw;
+}
+
 .logo-image {
     width: 13.5vw;
 }
@@ -49,8 +56,15 @@
         left: 20%;
     }
 
-    .nav {
+    .nav-tablet {
         right: 20.5%;
+    }
+
+    .name-step {
+        position: relative;
+        z-index: 999999;
+        height: inherit;
+        width: inherit;
     }
 
     .logo-image {
@@ -59,6 +73,16 @@
 
     .nav-logo {
         width: 3.7vw !important;
+    }
+
+    .nav-tablet {
+        display: flex;
+        position: fixed !important;
+        z-index: 29999;
+    }
+
+    .nav {
+        display: none;
     }
 }
 
@@ -71,6 +95,10 @@
 
     .logo-image {
         width: 31.5vw;
+    }
+
+    .nav-tablet {
+        display: none;
     }
 
     .nav-mobile {

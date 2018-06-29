@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { HashLink } from "react-router-hash-link";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { slide as Menu } from 'react-burger-menu'
 
@@ -27,7 +26,8 @@ class Header extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      menuOpen: false
+      menuOpen: false,
+
     }
   }
 
@@ -43,20 +43,11 @@ class Header extends React.Component {
     this.setState({menuOpen: false})
   }
 
-  // componentDidMount() {
-  //   // Decode entities in the URL
-  //   // Sometimes a URL like #/foo#bar will be encoded as #/foo%23bar
-  //   window.location.hash = window.decodeURIComponent(window.location.hash);
-  //   const scrollToAnchor = () => {
-  //     const hashParts = window.location.hash.split('#');
-  //     if (hashParts.length > 2) {
-  //       const hash = hashParts.slice(-1)[0];
-  //       document.querySelector(`#${hash}`).scrollIntoView();
-  //     }
-  //   };
-  //   scrollToAnchor();
-  //   window.onhashchange = scrollToAnchor;
-  // }
+  addNavigationReference = (e, data) => {
+    e.preventDefault();
+    console.log("In here!")
+    // console.log("Event: " + e.target + " Data: " + data)
+  }
 
   render() {
       return (
@@ -76,6 +67,26 @@ class Header extends React.Component {
             <AnchorLink href='#business'>
               <NavIcon name="Professional Services" image={business} hoverImage={businessHover}/>
             </AnchorLink> 
+            <AnchorLink href='#custom'>
+              <NavIcon name="Custom Solutions" image={custom} hoverImage={customHover}/>
+            </AnchorLink>
+            <Link to="/blog/">
+              <NavIcon name="News" image={news} hoverImage={newsHover}/>
+            </Link>
+            <AnchorLink href='#contact'>
+              <NavIcon name="Contact" image={contact} hoverImage={contactHover}/>
+            </AnchorLink>
+        </div>
+        <div className="nav-tablet">
+            <AnchorLink href='#home'>
+              <NavIcon name="Home" image={home} hoverImage={homeHover}/>
+            </AnchorLink>
+            <AnchorLink href='#about-us'>
+              <NavIcon name="About" image={about} hoverImage={aboutHover}/>
+            </AnchorLink> 
+            <AnchorLink href='#business'>
+              <NavIcon name="Professional Services" image={business} hoverImage={businessHover}/>
+            </AnchorLink>
             <AnchorLink href='#custom'>
               <NavIcon name="Custom Solutions" image={custom} hoverImage={customHover}/>
             </AnchorLink>

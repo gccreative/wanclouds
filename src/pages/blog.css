@@ -52,7 +52,7 @@ ul {
 
 .article-list {
   width: 60%;
-  margin-top: 52px;
+  margin-top: 3vw;
   margin-left: 0;
   position: relative;
 }
@@ -140,6 +140,7 @@ ul {
   left: 15%;
 }
 
+/*  MOBILE STYLES  */
 @media (max-width: 414px) {
   #title {
       display: none;

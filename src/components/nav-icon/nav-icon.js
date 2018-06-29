@@ -16,6 +16,19 @@ const NavTitle = posed.p({
   }
 })
 
+const NavTitleTablet = posed.p({
+  idle: {
+    opacity: 0,
+    top: "30px",
+    flip: true
+  },
+  hovered: {
+    opacity: 1,
+    top: "4vw",
+    flip: true
+  }
+})
+
 const HoverImage = posed.img({
   idle: {
     opacity: 0,
@@ -45,7 +58,8 @@ class NavIcon extends React.Component {
               onMouseLeave={() => this.hoverOut()}>
          <HoverImage pose={this.state.hovered ? "hovered" : "idle"} className="nav-logo hover" src={this.props.hoverImage} alt={this.props.name}/> 
          <img className="nav-logo" src={this.props.image} alt={this.props.name}/>
-         <NavTitle pose={this.state.hovered ? "hovered" : "idle"}>{this.props.name}</NavTitle>
+         <NavTitle id="header-desktop" pose={this.state.hovered ? "hovered" : "idle"}>{this.props.name}</NavTitle>
+         <NavTitleTablet id="header-ipad" pose={this.state.hovered ? "hovered" : "idle"}>{this.props.name}</NavTitleTablet>
        </div>
     )
   }

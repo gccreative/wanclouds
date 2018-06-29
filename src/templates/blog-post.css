@@ -19,7 +19,7 @@ body, html {
 }
 
 .blog-content small {
-  font-size: 1rem;
+  font-size: 1vw;
   font-family: "Jura";
   color: #066EAD;
   text-rendering: optimizeLegibility;
@@ -162,6 +162,54 @@ textarea {
   top: 17.5vw;
   right: 20vw;
   z-index: 5;
+}
+
+/*  IPAD STYLES  */
+@media (max-width: 768px) {
+  .blog-content {
+    width: 78%;
+  }
+
+  .blog-content p {
+    font-size: 1.85vw !important;
+    line-height: 2.5vw !important;
+  }
+
+  .author-section {
+    max-width: 100%;
+  }
+
+  .author-section .photo .image-cropper {
+      width: 21vw !important;
+      height: 21vw !important;
+  }
+
+  .author-info h1 {
+    font-size: 4vw !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .author-info p {
+    font-size: 1.7vw;
+  }
+
+  .author-info {
+    width: 50vw !important;
+  }
+  
+  .photo {
+    margin: 21px !important;
+  }
+
+  .section-contact .left-post {
+    max-width: 34vw !important;
+    margin-left: 17vw !important;
+    padding-right: 0 !important;
+  }
+
+  .post-contact h4 {
+    font-size: 2vw !important;
+  }
 }
 
 @media (max-width: 414px) {

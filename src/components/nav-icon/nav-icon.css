@@ -22,7 +22,26 @@
     position: absolute;
 }
 
+#header-ipad {
+    display: none;
+}
+
+/*  IPAD STYLES  */
+@media (max-width: 768px) {
+    #header-ipad {
+        display: unset;
+    }
+
+    #header-desktop {
+        display: none;
+    }
+}
+
+/*  MOBILE STYLES  */
 @media (max-width: 414px) {
+    #header-ipad {
+        display: none;
+    }
 
     .logo {
         left: 14%;
