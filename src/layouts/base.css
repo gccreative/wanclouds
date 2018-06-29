@@ -643,6 +643,16 @@ pre tt:after {
   height: 165.5vw;
 }
 
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
