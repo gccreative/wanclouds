@@ -78,7 +78,7 @@ class ContactUs extends React.Component {
                     <h4>Sending message...</h4>
                 </div>
                 ) :
-                (<form onSubmit={this.handleSubmit}>
+                (<form onSubmit={this.sendEmail}>
                   <label>
                     Full Name:
                     <input type="text" name="name" value={this.state.name} onChange={this.handleChange}/>
