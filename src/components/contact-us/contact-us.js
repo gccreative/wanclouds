@@ -6,6 +6,12 @@ import email from '../../assets/HOMEPAGE-WANCLOUDS-CONTACTUS-EMAILICON.png'
 import phoneBlog from '../../assets/BLOG-PRINCIPAL_CONTACT-CEL.png'
 import emailBlog from '../../assets/BLOG-PRINCIPAL_CONTACT-EMAIL.png'
 
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
 class ContactUs extends React.Component {
 
   constructor(props) {
@@ -27,7 +33,10 @@ class ContactUs extends React.Component {
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
-  sendEmail = () => {
+  sendEmail = e => {
+    e.preventDefault();
+    this.setState({...this.state, formSent: true})
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -36,9 +45,6 @@ class ContactUs extends React.Component {
       .then(() => this.emailSuccess())
       .catch(error => alert("ERROOOOOOOR"));
 
-    e.preventDefault();
-
-    // this.setState({...this.state, formSent: true})
     // setTimeout(this.emailSuccess, 2000)
     // clearInterval(wait);
   }
