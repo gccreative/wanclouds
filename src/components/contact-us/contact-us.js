@@ -13,7 +13,10 @@ class ContactUs extends React.Component {
     this.state = {
         formSent: false,
         emailSuccess: false,
-        error: false
+        error: false,
+        name: "", 
+        email: "", 
+        message: ""
     }
   }
 
@@ -22,19 +25,21 @@ class ContactUs extends React.Component {
     console.log(this.state);
   }
 
-  sendEmail = () => {
-    // this.setState({...this.state, formSent: true})
-    // emailjs.sendForm("default_service", "wanclouds", '#myForm')
-    //     .then((response) => {
-    //     this.setState({... this.state, emailSuccess: true })
-    //     console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-    //     }, (err) => {
-    //     this.setState({... this.state, error: true })
-    //     console.log("FAILED. error=", err);
-    //     });
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
-    this.setState({...this.state, formSent: true})
-    setTimeout(this.emailSuccess, 2000)
+  sendEmail = () => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => this.emailSuccess())
+      .catch(error => alert("ERROOOOOOOR"));
+
+    e.preventDefault();
+
+    // this.setState({...this.state, formSent: true})
+    // setTimeout(this.emailSuccess, 2000)
     // clearInterval(wait);
   }
 
@@ -73,21 +78,20 @@ class ContactUs extends React.Component {
                     <h4>Sending message...</h4>
                 </div>
                 ) :
-                (<form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-                  <input type="hidden" name="form-name" value="contact" />
+                (<form onSubmit={this.handleSubmit}>
                   <label>
                     Full Name:
-                    <input type="text" name="name" />
+                    <input type="text" name="name" value={this.state.name} onChange={this.handleChange}/>
                   </label>
                   <label>
                     Email:
-                    <input type="text" name="email" />
+                    <input type="text" name="email" value={this.state.email} onChange={this.handleChange}/>
                   </label>
                   <label>
                     Message
-                    <textarea name="comment" cols="10" rows="3"></textarea>
+                    <textarea name="message" cols="10" rows="3" value={this.state.message} onChange={this.handleChange}></textarea>
                   </label>
-                  <button type="button" onClick={() => this.sendEmail()}>SEND</button>
+                  <button type="submit">SEND</button>
                 </form>) }
         </div>
       </div>
