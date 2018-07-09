@@ -1,5 +1,6 @@
 import React from 'react'
 import posed, { PoseGroup } from 'react-pose'
+import { tween, spring } from 'popmotion'
 
 import './profesional-services.css'
 
@@ -12,22 +13,26 @@ import leftArrow from '../../assets/HOME_STRATEGICPARTNERS-ICON-PREVIOUS.png'
 const CloudMigration = posed.div({
   enter: { 
     x: '0%',
-    opacity: 1 
+    opacity: 1,
+    transition: props => spring({...props, stiffness: 50})
   },
   exit: { 
     x: '-100%',
-    opacity: 0
+    opacity: 0,
+    transition: props => spring({...props, stiffness: 50})
   }
 })
 
 const RDBoost = posed.div({
   enter: { 
     x: '0%',
-    opacity: 1 
+    opacity: 1,
+    transition: props => spring({...props, stiffness: 50})
   },
   exit: { 
     x: '100%',
-    opacity: 0
+    opacity: 0,
+    transition: props => spring({...props, stiffness: 50})
   }
 })
 
