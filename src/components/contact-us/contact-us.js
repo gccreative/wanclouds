@@ -22,7 +22,7 @@ class ContactUs extends React.Component {
         error: false,
         name: "", 
         email: "", 
-        message: ""
+        comment: ""
     }
   }
 
@@ -95,7 +95,7 @@ class ContactUs extends React.Component {
                   </label>
                   <label>
                     Message
-                    <textarea name="message" cols="10" rows="3" value={this.state.message} onChange={this.handleChange}></textarea>
+                    <textarea name="comment" cols="10" rows="3" value={this.state.comment} onChange={this.handleChange}></textarea>
                   </label>
                   <button type="submit">SEND</button>
                 </form>) }
