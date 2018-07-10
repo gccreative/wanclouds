@@ -33,11 +33,11 @@ class BlogPostTemplate extends React.Component {
     const post = get(this.props, 'data.contentfulPost')
     const posts = get(this, 'props.data.allContentfulPost.edges')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const url = window.location.href
+    const url = 'https://www.wan-clouds.com/blog/' + post.slug
 
     const disqusShortname = "wanclouds";
     const disqusConfig = {
-        url: window.location.href,
+        url: 'https://www.wan-clouds.com/blog/' + post.slug,
         identifier: post.slug,
         title: post.title,
     };
