@@ -10,6 +10,7 @@ import {
   TwitterShareButton,
   TwitterIcon
 } from 'react-share';
+import Disqus from 'disqus-react';
 
 import './blog-post.css'
 
@@ -32,9 +33,16 @@ class BlogPostTemplate extends React.Component {
     const post = get(this.props, 'data.contentfulPost')
     const posts = get(this, 'props.data.allContentfulPost.edges')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const url = 'https://www.wan-clouds.com/blog/' + post.slug
+    const url = window.location.href
 
-    console.log(posts);
+    const disqusShortname = "wanclouds";
+    const disqusConfig = {
+        url: window.location.href,
+        identifier: post.slug,
+        title: post.title,
+    };
+
+    console.log(disqusConfig);
 
     return (
       <div className="container">
@@ -66,10 +74,6 @@ class BlogPostTemplate extends React.Component {
           </div>
           <Author author={post.author} />
           <div className="social">
-            <div className="like">
-                <img src={like} alt="like" className="like-button"/>
-                <p>1,234</p>
-            </div>
             <div className="sharing">
               <FacebookShareButton
                   url={url}
@@ -81,7 +85,8 @@ class BlogPostTemplate extends React.Component {
               </FacebookShareButton>
               <TwitterShareButton
                   url={url}
-                  quote={`${post.title} - ${post.subtitle}`}
+                  title={`${post.title} - ${post.subtitle}`}
+                  via="Wanclouds"
                   className="social-button">
                   <TwitterIcon
                     size={32}
@@ -89,7 +94,7 @@ class BlogPostTemplate extends React.Component {
               </TwitterShareButton>
               <LinkedinShareButton
                   url={url}
-                  quote={`${post.title} - ${post.subtitle}`}
+                  title={`${post.title} - ${post.subtitle}`}
                   className="social-button">
                   <LinkedinIcon
                     size={32}
@@ -99,7 +104,7 @@ class BlogPostTemplate extends React.Component {
           </div>
           <div className="comments">
                 <h1>Leave a comment</h1>
-                <form>
+                {/* <form>
                   <div className="comment-box">
                     <label>
                       Full Name:
@@ -116,7 +121,8 @@ class BlogPostTemplate extends React.Component {
                       <textarea name="comment" cols="30" rows="5"></textarea>
                     </label>
                   </div>
-                </form>
+                </form> */}
+              <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
             </div>
           </div>
           <ContactPost />

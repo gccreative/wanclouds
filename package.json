@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "contentful-import": "^7.0.1",
+    "disqus-react": "^1.0.5",
     "emailjs-com": "^2.1.1",
     "gatsby-link": "^1.6.44",
     "gatsby-plugin-react-helmet": "^2.0.11",
