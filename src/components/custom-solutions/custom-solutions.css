@@ -234,6 +234,12 @@
         font-size: 71%;
     }
 
+
+    .description-short p {
+        font-size: 3.9vw;
+        line-height: 5.85vw;
+    }
+
     .custom-name {
         width: 100%;
         align-items: center;

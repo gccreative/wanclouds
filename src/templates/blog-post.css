@@ -218,6 +218,15 @@ textarea {
     padding: 34px;
   }
 
+  .blog-content p {
+    line-height: 1.6rem !important;
+    font-size: 3.9vw !important;
+  }
+
+  .author-info p {
+    font-size: 3.9vw;
+  }
+
   .section-headline {
     line-height: 1.1;
     margin: 0;

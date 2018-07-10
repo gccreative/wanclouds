@@ -140,107 +140,52 @@ ul {
   left: 15%;
 }
 
+#page-numbers {
+  z-index: 99999;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  height: 5vw;
+}
+
+#page-numbers li {
+  font-size: 1.56vw;
+  font-family: "Jura";
+  color: grey;
+  text-rendering: optimizeLegibility;
+  line-height: 1.1;
+  width: 3vw;
+  height: 3vw;
+  margin: 0.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.active-page {
+  background-color: gray;
+  border-radius: 50%;
+  color: white !important;
+  cursor: initial;
+}
+
+#page-arrow {
+  margin-top: 0.6vw;
+  cursor: pointer;
+}
+
+
 /*  MOBILE STYLES  */
 @media (max-width: 414px) {
-  #title {
-      display: none;
+  #page-numbers {
+    height: 8vw;
+    justify-content: center;
   }
 
-  #title-mobile {
-      display: flex;
-      padding: 20px;
-      margin: 0;
-  }
-
-  .title-space {
-    display: none;
-  }
-
-  .article-list {
-    width: 100%;
-    padding: 34px;
-    margin: 0;
-  }
-
-  .round-image {
-    height: auto !important;
-    width: 100% !important;
-    margin-top: 0;
-  }
-  
-  small {
-    font-size: 100% !important;
-    margin-top: 12px !important;
-  }
-
-  .preview-container-left {
-    flex-direction: column-reverse !important;
-  }
-  
-  .blog-info-left {
-    width: 100% !important;
-  }
-  
-  .blog-info-left h3 {
-    font-size: 2.5rem !important;
-  }
-  
-  .blog-info-left h4 {
-    font-size: 1.3rem !important;
-  }
-
-  .body-preview-left {
-    width: 100% !important;
-    height: 189px !important;
-  }
-
-  .read-more-left {
-    margin: 30px 0 -36px 0 !important;
-    z-index: 3 !important;
-    width: 20vw !important;
-    height: 20vw !important;
-  }
-
-  .read-more-left p {
-    font-size: 122% !important;
-  }
-
-  .preview-container-right {
-    flex-direction: column-reverse !important;
-  }
-  
-  .blog-info-right {
-    width: 100% !important;
-    margin-left: 0 !important;
-  }
-  
-  .blog-info-right h3 {
-    font-size: 2.5rem !important;
-  }
-  
-  .blog-info-right h4 {
-    font-size: 1.3rem !important;
-  }
-
-  .body-preview-right {
-    width: 100% !important;
-    height: 189px !important;
-    margin-left: 0 !important;
-  }
-
-  .read-more-right {
-    margin: 30px 0 -36px 0 !important;
-    z-index: 3 !important;
-    width: 20vw !important;
-    height: 20vw !important;
-  }
-
-  .read-more-right p {
-    font-size: 122% !important;
-  }
-
-  .image-cropper {
-    width: 62vw !important;
-    height: 62vw !important;
+  #page-numbers li {
+    width: 8vw;
+    height: 8vw;
+    font-size: 4vw;
   }
 }

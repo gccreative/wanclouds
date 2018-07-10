@@ -14,12 +14,12 @@ const CloudMigration = posed.div({
   enter: { 
     x: '0%',
     opacity: 1,
-    transition: props => spring({...props, stiffness: 50})
+    transition: props => tween({...props, duration: 400})
   },
   exit: { 
     x: '-100%',
     opacity: 0,
-    transition: props => spring({...props, stiffness: 50})
+    transition: props => tween({...props, duration: 400})
   }
 })
 
@@ -27,12 +27,12 @@ const RDBoost = posed.div({
   enter: { 
     x: '0%',
     opacity: 1,
-    transition: props => spring({...props, stiffness: 50})
+    transition: props => tween({...props, duration: 400})
   },
   exit: { 
     x: '100%',
     opacity: 0,
-    transition: props => spring({...props, stiffness: 50})
+    transition: props => tween({...props, duration: 400})
   }
 })
 

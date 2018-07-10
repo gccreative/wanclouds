@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import './blog.css'
@@ -12,8 +11,39 @@ import Footer from '../components/footer/footer'
 import title from '../assets/Blog/BLOG-TITLE.png'
 import titleBlog from '../assets/Blog/BLOG-TITLE-MOBILE.png'
 import bg from '../assets/Blog/BLOG-PRINCIPAL-BG.png'
+import arrow from '../assets/HOME_STRATEGICPARTNERS-ICON-NEXT.png'
 
 class BlogIndex extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentPage: 1,
+      postsPerPage: 3
+    }
+  }
+
+  handleClick = (event) => {
+    console.log(event.target.id);
+    this.setState({
+      ...this.state,
+      currentPage: Number(event.target.id)
+    });
+  }
+
+  nextPage = (event) => {
+    this.setState({
+      ...this.state,
+      currentPage: this.state.currentPage + 1
+    })
+  }
+
+  reset = () => {
+    this.setState({
+      ...this.state,
+      currentPage: 1
+    })
+  }
 
   getNode(array) {
     let nodes = [];
@@ -36,12 +66,40 @@ class BlogIndex extends React.Component {
   }
 
   render() {
+    const { currentPage, postsPerPage } = this.state;
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const postsRaw = get(this, 'props.data.allContentfulPost.edges')
     const postsNodes = this.getNode(postsRaw);
     const posts = this.removeDuplicates(postsNodes, 'slug');
 
     console.log(posts);
+
+    // Logic for displaying todos
+    const indexOfLastpost = currentPage * postsPerPage;
+    const indexOfFirstpost = indexOfLastpost - postsPerPage;
+    const currentposts = posts.slice(indexOfFirstpost, indexOfLastpost);
+
+    const renderposts = currentposts.map((post, index) => {
+      return (<li key={post.slug}>
+                  <ArticlePreview article={post} index={index}/>
+              </li>)
+    });
+
+    // Logic for displaying page numbers
+    const pageNumbers = [];
+    for (let i = 1; i <= Math.ceil(posts.length / postsPerPage); i++) {
+      pageNumbers.push(i);
+    }
+
+    const renderPageNumbers = pageNumbers.map(number => {
+      return (
+        <li key={number} id={number} className={this.state.currentPage === number ? "active-page" : "none"} 
+            onClick={(e) => this.handleClick(e)}>
+          {number}
+        </li>
+      );
+    });
+
 
     return (
       <div className="background">
@@ -51,7 +109,7 @@ class BlogIndex extends React.Component {
         <img id="title-mobile" src={titleBlog} alt="title"/>
         <div className="title-space" />
         <div className="wrapper">
-          <ul className="article-list">
+          { /* <ul className="article-list">
             {posts.map((node, i) => {
               return (
                 <li key={node.slug}>
@@ -59,6 +117,16 @@ class BlogIndex extends React.Component {
                 </li>
               )
             })}
+          </ul> */}
+          <ul className="article-list">
+            {renderposts}
+            <ul id="page-numbers">
+              {renderPageNumbers}
+              <li>
+                <img src={arrow} alt="arrow" id="page-arrow" 
+                     onClick={this.state.currentPage !== pageNumbers.length ? () => this.nextPage() : this.reset}/>
+              </li>
+            </ul>
           </ul>
         </div>
         <ContactUs state="blog"/>
@@ -80,7 +148,7 @@ query BlogIndexQuery {
             name
             shortBiography {
               childMarkdownRemark {
-                html
+                rawMarkdownBody
               }
             }
             photo {
@@ -99,7 +167,7 @@ query BlogIndexQuery {
           }
           body {
             childMarkdownRemark {
-              html
+              rawMarkdownBody
             }
           }
         }

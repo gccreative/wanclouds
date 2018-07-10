@@ -24,7 +24,7 @@
 
 .section-contact {
     margin: 0;
-    margin-top: -4.7vw !important;
+    margin-top: -1.7vw !important;
     margin-bottom: 2.3vw !important;
     padding: 0;
     display: flex;
@@ -81,5 +81,16 @@
 
     .info-line h4 {
         font-size: 2.4vw;
+    }
+}
+
+/*  IPAD STYLES  */
+@media (max-width: 414px) {
+    .section-contact .left-post {
+        max-width: 100% !important;
+    }
+
+    .post-contact h4 {
+        font-size: 1.4rem !important;
     }
 }

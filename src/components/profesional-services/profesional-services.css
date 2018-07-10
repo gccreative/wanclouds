@@ -267,6 +267,17 @@
         height: auto;
     }
 
+    .service p {
+        font-size: 3.9vw;
+        line-height: 5.85vw;
+        text-align: justify;
+    }
+
+    .description-short-two p {
+        font-size: 3.9vw;
+        line-height: 5.85vw;
+    }
+
     .changing-content {
         height: auto;
         width: 100%;

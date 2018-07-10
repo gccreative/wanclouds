@@ -5,9 +5,7 @@ import './partners.css'
 
 import partner1 from '../../assets/HOME_PARTNERS-AMAZON-WANCLOUDS.png'
 import partner2 from '../../assets/HOME_PARTNERS-MICROSOFT-WANCLOUDS.png'
-import partner3 from '../../assets/HOME_PARTNERS-CISCO-WANCLOUDS.png'
-import partner4 from '../../assets/HOME_PARTNERS-SOPRIS-WANCLOUDS.png'
-import partner5 from '../../assets/HOME_PARTNERS-CABLE&WIRELESS-WANCLOUDS.png'
+import partner3 from '../../assets/HOME_PARTNERS-SOPRIS-WANCLOUDS.png'
 import rightArrow from '../../assets/HOME_STRATEGICPARTNERS-ICON-NEXT.png'
 import leftArrow from '../../assets/HOME_STRATEGICPARTNERS-ICON-PREVIOUS.png'
 
@@ -51,14 +49,14 @@ class Partners extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      parterns: [partner1, partner2, partner3, partner4, partner5],
+      parterns: [partner1, partner2, partner3],
       selectedPartnerOne: 0,
       selectedPartnerTwo: 1
     }
   }
   
   nextPartners = () => {
-    if (this.state.selectedPartnerTwo === 4) {
+    if (this.state.selectedPartnerTwo === this.state.parterns.length - 1) {
       this.setState({
         ... this.state,
         selectedPartnerOne: 0,
@@ -151,12 +149,6 @@ class Partners extends React.Component {
                               "active" : "idle"} />
               <Indicator className="blue-circle" 
                          pose={this.state.selectedPartnerOne === 2 || this.state.selectedPartnerTwo === 2 ? 
-                              "active" : "idle"} />
-              <Indicator className="blue-circle"  
-                         pose={this.state.selectedPartnerOne === 3 || this.state.selectedPartnerTwo === 3 ? 
-                              "active" : "idle"} />
-              <Indicator className="blue-circle"  
-                         pose={this.state.selectedPartnerOne === 4 || this.state.selectedPartnerTwo === 4 ? 
                               "active" : "idle"} />
           </div>
       </div>

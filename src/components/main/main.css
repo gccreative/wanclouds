@@ -155,6 +155,11 @@ span h1 {
         position: relative;
     }
 
+    .left p {
+        font-size: 3.9vw !important;
+        line-height: 5.85vw !important;
+    }
+
     .text {
         top: 50px;
         left: 30px;

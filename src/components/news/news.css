@@ -271,12 +271,13 @@
     }
 
     .body-preview p {
-        line-height: 6.25vw;
+        font-size: 3.9vw;
+        line-height: 5.85vw;
     }
 
     .read-more {
         width: 93px;
-        height: 169px;
+        height: 149px;
         margin: 0px;
         z-index: 3;
     }
@@ -292,5 +293,10 @@
     .preview-image .image-cropper {
         width: 300px;
         height: 300px;
+    }
+
+    #news-main-image {
+        width: 62vw !important;
+        height: 62vw !important;
     }
 }

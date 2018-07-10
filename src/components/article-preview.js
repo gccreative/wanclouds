@@ -22,11 +22,9 @@ export default ({ article, index }) => {
       <h4>{article.subtitle}</h4>
       <small> By: {article.author.name}</small>
       <div className={isEven(index) ? "body-preview-left" : "body-preview-right"}>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: article.body.childMarkdownRemark.html,
-          }}
-        />
+        <p>
+          {article.body.childMarkdownRemark.rawMarkdownBody}
+        </p>
       </div>
       <div className={isEven(index) ? "read-more-left" : "read-more-right"}>
         <p>

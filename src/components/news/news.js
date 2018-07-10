@@ -2,8 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import './news.css'
 
-import drawing from '../../assets/HOME_ESQUEMA-CUSTOMSOLUTIONS-WANCLOUDS.png'
-
 const News = ({ siteTitle, post }) => (
   <div className="news-container">
     <div className="news-name">
@@ -35,8 +33,8 @@ const News = ({ siteTitle, post }) => (
           </div>
         </div>
         <div className="preview-image">
-          <div className="image-cropper">
-            <img src={post.mainPhoto.file.url} alt="" />
+          <div className="image-cropper" id="news-main-image">
+            <img src={post.mainPhoto.file.url} alt="post-image"/>
           </div>
         </div>
       </div>

@@ -195,6 +195,10 @@ button {
         margin-bottom: 12.5vw;
     }
 
+    .left h4 {
+        font-size: 1.4rem;
+    }
+
     .info {
         width: 96%;
     }
@@ -211,6 +215,7 @@ button {
 
     .click form {
         width: 81%;
+        justify-content: center;
     }
 
     .click label {
@@ -222,8 +227,12 @@ button {
         padding: 2vw 4vw !important;
     }
 
-    .click input, .click textarea {
+    .click input {
         height: 28px;
+    }
+
+    .click textarea {
+        height: 64px;
     }
 
     .section-contact .left-blog {
