@@ -75,8 +75,40 @@ class Partners extends React.Component {
     if (this.state.selectedPartnerOne === 0) {
       this.setState({
         ... this.state,
-        selectedPartnerOne: 3,
-        selectedPartnerTwo: 4
+        selectedPartnerOne: this.state.parterns.length - 2,
+        selectedPartnerTwo: this.state.parterns.length - 1
+      })
+    } else {
+      this.setState({
+        ... this.state,
+        selectedPartnerOne: this.state.selectedPartnerOne - 1,
+        selectedPartnerTwo: this.state.selectedPartnerTwo - 1,
+      })
+    }
+  }
+  
+  mobileNext = () => {
+    if (this.state.selectedPartnerTwo === this.state.parterns.length) {
+      this.setState({
+        ... this.state,
+        selectedPartnerOne: 0,
+        selectedPartnerTwo: 1
+      })
+    } else {
+      this.setState({
+        ... this.state,
+        selectedPartnerOne: this.state.selectedPartnerOne + 1,
+        selectedPartnerTwo: this.state.selectedPartnerTwo + 1,
+      })
+    }
+  }
+  
+  mobilePrevious = () => {
+    if (this.state.selectedPartnerOne === 0) {
+      this.setState({
+        ... this.state,
+        selectedPartnerOne: this.state.parterns.length - 1,
+        selectedPartnerTwo: this.state.parterns.length
       })
     } else {
       this.setState({
@@ -116,13 +148,13 @@ class Partners extends React.Component {
               </div>
           </div>
           <div className="slider-mobile">
-            <div className="arrow-left" onClick={() => this.previousPartners()}>
+            <div className="arrow-left" onClick={() => this.mobilePrevious()}>
                 <img src={leftArrow} className="arrow-image" alt="arrow"/>
             </div>
               <PartnerMobile pose={this.state.selectedPartnerOne % 2 ? "hovered" : "idle"} className="partner-one">
                   <img className="partner-image" src={this.state.parterns[this.state.selectedPartnerOne]} alt="partner"/>
               </PartnerMobile>
-              <div className="arrow-right" onClick={() => this.nextPartners()}>
+              <div className="arrow-right" onClick={() => this.mobileNext()}>
                 <img src={rightArrow} className="arrow-image" alt="arrow"/>
               </div>
           </div>
