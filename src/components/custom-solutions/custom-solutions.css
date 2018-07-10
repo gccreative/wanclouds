@@ -149,7 +149,7 @@
 }
 
 /*  IPAD STYLES  */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .custom-container {
         margin: 54px 0;
     }

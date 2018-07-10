@@ -53,8 +53,20 @@
 }
 
 .section-contact .left {
-    max-width: 32vw;
+    max-width: 34vw;
     margin-left: 20vw;
+}
+
+.section-contact .left h1 {
+        font-family: "Russo One";
+        color: #dfba2c;
+        text-rendering: optimizeLegibility;
+        font-size: 5vw;
+        line-height: 0.1;
+        letter-spacing: 3px;
+        line-height: 1;
+        margin: 0;
+        margin-bottom: 1vw;
 }
 
 .section-contact .left-blog {
@@ -103,13 +115,20 @@
     background-color: white;
 }
 
+.click input {
+    height: 2.5vw;
+}
+
+.click textarea {
+    height: 5vw;
+}
+
 .click label {
     display: flex;
     flex-direction: column;
     text-align: center;
     color: #0D1C39;
     font-size: 1vw;
-    margin: 1vw;
 }
 
 .thank-you {
@@ -152,7 +171,7 @@ button {
 }
 
 /*  IPAD STYLES  */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .section-contact .left {
         max-width: 40vw;
         margin-left: 15vw;
@@ -168,8 +187,9 @@ button {
     }
 
     .click form {
-        width: 54%;
+        width: 69%;
         height: 85%;
+        justify-content: center;
     }
 
     .click label {

@@ -198,8 +198,15 @@
     padding-left: 43px;
 }
 
+/*  IPAD PRO LANDSCAPE STYLES  */
+@media (max-width: 1366px) {
+    .changing-content {
+        height: 41.7vw;
+    }
+}
+
 /*  IPAD STYLES  */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     #services {
         width: 78%;
     }

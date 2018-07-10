@@ -157,7 +157,7 @@
 }
 
 /*  IPAD STYLES  */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .news-container {
         margin: 98px 0;
     }

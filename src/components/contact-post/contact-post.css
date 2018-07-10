@@ -73,7 +73,7 @@
 }
 
 /*  IPAD STYLES  */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .section-contact .left-blog {
         max-width: 36vw;
         margin-left: 16vw;
